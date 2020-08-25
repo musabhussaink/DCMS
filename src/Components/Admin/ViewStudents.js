@@ -9,19 +9,19 @@ export default class ViewStudents extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
-                            <h2>Student</h2>
+                            <h2>Student</h2> <br></br>
                             <form action="/Admin/Student" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
                                 <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="regNo">Search by Registration No</option>
                                     <option value="email">Search by Email</option>
                                 </select>
-                                <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text" defaultValue />
-                                <input type="submit" defaultValue="Search" className="btn btn-primary" style={{ marginLeft: 5 }} />
+                                <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text" />
+                                {/* <input type="submit" defaultValue="Search" className="btn btn-primary" style={{ marginLeft: 5 }} /> */}
                             </div>
                             </form>
-                            <br />
-                            <form action="/Admin/DeleteStudentMultiple" method="post" onsubmit="return confirmDelete(this) && false;"><table className="table table-striped table-condensed table-bordered">
+                            <br /> <hr></hr>
+                            <form action="/Admin/Student" method="post" onsubmit="return confirmDelete(this) && false;"><table className="table table-striped table-condensed table-bordered">
                                 <tbody><tr>
                                     <th>
                                     </th>
@@ -62,13 +62,13 @@ export default class ViewStudents extends Component {
                                         <td>
                                             0
                                         </td>
-                                        <td>
+                                        {/* <td>
                                             <Link to="/Admin/Student/AssignCourse" className="btn btn-primary">Assign Course</Link>
-                                        </td>
+                                        </td> */}
                                         <td>
                                             <Link to="/Admin/EditStudent">Edit</Link> |
                                             <Link to="/Admin/DetailsStudent">Details</Link> |
-                                            <a href="/Admin/DeleteStudent">Delete</a>
+                                            <a href="/Admin/Student">Delete</a>
                                         </td>
                                     </tr>
                                 </tbody>

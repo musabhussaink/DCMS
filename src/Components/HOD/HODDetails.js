@@ -58,7 +58,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=1&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=1&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -78,7 +78,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=2&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=2&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -98,7 +98,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=4&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=4&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -118,7 +118,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=1&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=1&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -138,7 +138,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=4&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=4&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -158,7 +158,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=1&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=1&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -178,7 +178,7 @@ class HODDetails extends Component {
                                                 FA14
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=1&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=1&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -198,12 +198,12 @@ class HODDetails extends Component {
                                                 SP15
                     </td>
                                             <td>
-                                                <a href="/Admin/MentorUnregister?cID=1&fID=1029">Unassign</a>
+                                                <a href="/HOD/MentorUnregister?cID=1&fID=1029">Unassign</a>
                                             </td>
                                         </tr>
                                     </tbody></table>
                                 <br />
-                                <Link to="/Admin/HOD">Back to Head of Department</Link>
+                                <Link to="/HOD/HOD">Back to Head of Department</Link>
                             </div>
                             {/* /.col-lg-12 */}
                         </div>

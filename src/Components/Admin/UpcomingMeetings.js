@@ -34,8 +34,11 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>5</td>
                                         <td>Dr. Yasir Faheem</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                            </tr>
+                                        <td><Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>
+                                        <Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Do you want details of participants?'))}><button className="btn btn-primary">Participants Details</button></Link>
+                                        </td>        
+                                    </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>21-08-2020</td>
@@ -45,7 +48,11 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>10</td>
                                         <td>Dr. Kamran Abbasi</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td><Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>
+                                        <Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Do you want details of participants?'))}><button className="btn btn-primary">Participants Details</button></Link>
+
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -56,7 +63,13 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>20</td>
                                         <td>Dr. Rohan Ilyas</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>
+                                            <Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link>
+                                        </td>
+                                        <td>
+                                        <Link to="/Admin/MeetingParticipants" onClick={() => (window.confirm('Do you want details of participants?'))}><button className="btn btn-primary">Participants Details</button></Link>
+
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

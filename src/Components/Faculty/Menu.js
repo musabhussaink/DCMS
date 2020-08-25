@@ -13,6 +13,15 @@ export default class Menu extends Component {
                                 <li>
                                     <Link to="/Faculty">Dashboard</Link><i className="fa fa-dashboard fa-fw" />
                                 </li>
+                                {/* <li>
+                                    <a href="#"> Committees<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <Link to="/Faculty/ViewCommittee"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                    </ul>
+                                    
+                                </li> */}
                                 <li>
                                     <a href="#"> FYP Management<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
@@ -30,15 +39,7 @@ export default class Menu extends Component {
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
-                                <li>
-                                    <a href="#"> Committees<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
-                                    <ul className="nav nav-second-level">
-                                        <li>
-                                            <Link to="/Faculty/ViewCommittee"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                    </ul>
-                                    {/* /.nav-second-level */}
-                                </li>
+                                
                             </ul>
                         </div>
                         {/* /.sidebar-collapse */}

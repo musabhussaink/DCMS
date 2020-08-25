@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'; 
+
 
 export default class Login extends Component {
     render() {
@@ -21,7 +23,7 @@ export default class Login extends Component {
                                             <div id="tabs-1" style={{ marginLeft: '30px' }}>
                                                 <br />
                                                 <section id="loginForm">
-                                                    <form action="/Home/LoginFaculty" className="form-horizontal" method="post" role="form">
+                                                    <form className="form-horizontal" onSubmit = {(e)=>login(e)}>
                                                         <div className="form-group">
                                                             <label className="col-md-2 control-label" htmlFor="Email">Email</label>
                                                             <div className="col-md-10">
@@ -42,19 +44,11 @@ export default class Login extends Component {
                                                                 <input type="submit" defaultValue="Log in" className="btn btn-default" />
                                                             </div>
                                                         </div>
-                                                        <div style={{ marginLeft: 100 }}>
-                                                            <a className="btn btn-primary" href="/Admin">Admin</a>
-
-                                                            <a className="btn btn-primary" href="/Faculty">Faculty</a>
-
-                                                            <a className="btn btn-primary" href="/HOD">HOD</a>
-                                                            <a className="btn btn-primary" href="/HOC">HOC</a>
-
-                                                            <a className="btn btn-primary" href="/Student">Student</a>
-                                                            <a className="btn btn-primary" href="/MOC">Committee Member</a>
+                                                        <div id= 'role' style={{ marginLeft: 100 }}>
+                                                            
 
                                                         </div>
-
+                                                    
                                                         {/* <div style={{ marginLeft: 100 }}>
                                                             <a href="/Home/ForgotPassword">Forgot Password?</a>
                                                         </div> */}
@@ -86,5 +80,39 @@ export default class Login extends Component {
             </div>
 
         )
-    }
+        function login(e){
+            e.preventDefault();
+            let request = {
+              email: document.getElementById("Email").value,
+              password: document.getElementById("Password").value
+            }
+            axios.post('http://localhost:3000/login', request)
+            .then( resp => {
+              if(resp.data.message == 'Admin'){   
+                  document.getElementById("role").innerHTML +=  
+                  "<p>Click me to Continue<br><a className='btn btn-primary' href='/Admin'><strong>Admin</strong></a></p>";
+              } else if(resp.data.message == 'HOD'){   
+                document.getElementById("role").innerHTML +=  
+                "<p>Click me to Continue<br><a className='btn btn-primary' href='/HOD'><strong>HOD</strong></a></p>"
+            } else if(resp.data.message == 'HOC'){   
+                document.getElementById("role").innerHTML +=  
+                "<p>Click me to Continue<br><a className='btn btn-primary' href='/HOC'><strong>HOC</strong></a></p>"
+            } else if(resp.data.message == 'Committee Member'){   
+                document.getElementById("role").innerHTML +=  
+                "<p>Click me to Continue<br><a className='btn btn-primary' href='/MOC'><strong>Committee Member</strong></a></p>"
+            } else if(resp.data.message == 'Faculty'){   
+                document.getElementById("role").innerHTML +=  
+                "<p>Click me to Continue<br><a className='btn btn-primary' href='/Faculty'><strong>Faculty</strong></a></p>"
+            } else if(resp.data.message == 'Student'){   
+                document.getElementById("role").innerHTML +=  
+                "<p>Click me to Continue<br><a className='btn btn-primary' href='/Student'><strong>Student</strong></a></p>"
+            } else {
+                alert('error')
+            }
+            })
+            .catch( err => {
+              console.log(err);
+            })
+          }
+    } 
 }

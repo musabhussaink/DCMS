@@ -36,11 +36,11 @@ export default class ViewSection extends Component {
                                             A
                                         </td>
                                         <td>
-                                            <Link to="/Admin/SectionCourse">Add</Link>
+                                            <Link to="/HOD/SectionCourse">Add</Link>
                                         </td>
                                         <td>
-                                            <Link to="/Admin/DetailsSection">Details</Link> |
-                                            <Link to="/Admin/DeleteSection">Delete</Link>
+                                            <Link to="/HOD/DetailsSection">Details</Link> |
+                                            <Link to="/HOD/DeleteSection">Delete</Link>
                                         </td>
                                     </tr>
                                 </tbody></table>

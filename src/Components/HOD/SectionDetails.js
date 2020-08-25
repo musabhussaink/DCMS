@@ -43,7 +43,7 @@ export default class SectionDetails extends Component {
                                                         FA14
                     </td>
                                                     <td>
-                                                        <a href="/Admin/DeleteSecCourse/1?secID=7">Delete</a>
+                                                        <a href="/HOD/DeleteSecCourse/1?secID=7">Delete</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -57,7 +57,7 @@ export default class SectionDetails extends Component {
                                                         FA14
                     </td>
                                                     <td>
-                                                        <a href="/Admin/DeleteSecCourse/2?secID=7">Delete</a>
+                                                        <a href="/HOD/DeleteSecCourse/2?secID=7">Delete</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -71,7 +71,7 @@ export default class SectionDetails extends Component {
                                                         FA14
                     </td>
                                                     <td>
-                                                        <a href="/Admin/DeleteSecCourse/4?secID=7">Delete</a>
+                                                        <a href="/HOD/DeleteSecCourse/4?secID=7">Delete</a>
                                                     </td>
                                                 </tr>
                                             </tbody></table>
@@ -80,7 +80,7 @@ export default class SectionDetails extends Component {
                                     </dd>
                                 </dl>
                             </div>
-                            <Link to="/Admin/Section">Back to Sections</Link>
+                            <Link to="/HOD/Section">Back to Sections</Link>
                             <br />
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

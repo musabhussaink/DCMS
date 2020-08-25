@@ -10,7 +10,7 @@ export default class ViewMentor extends Component {
                         <div className="col-lg-12">
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
                             <h2>Head of Department</h2>
-                            <form action="/Admin/Mentor" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
+                            <form action="/HOD/Mentor" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
                                 <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
@@ -43,9 +43,9 @@ export default class ViewMentor extends Component {
                                             <a href="mailto:kamran_bcs095@yahoo.com">kamran_bcs095@yahoo.com</a>
                                         </td>
                                         <td>
-                                            <Link to="/Admin/MentorCourse">Assign Course</Link> |
-                                            <Link to="/Admin/MentorDetails">Details</Link>  |
-                                            <Link to="/Admin/MentorDetails">Delete</Link>
+                                            <Link to="/HOD/MentorCourse">Assign Course</Link> |
+                                            <Link to="/HOD/MentorDetails">Details</Link>  |
+                                            <Link to="/HOD/MentorDetails">Delete</Link>
                                         </td>
                                     </tr>
                                 </tbody></table>

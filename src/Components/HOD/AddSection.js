@@ -9,7 +9,7 @@ export default class AddSection extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Add Section</h2>
-                            <form action="/Admin/CreateSection" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="9VoIdSnaplP2kJk8caDA2b19kWHDL5FZMPBNnUz4ZVSzNY-_C4Q_pZXVjyMjDp3OFtATglj0Lxb7vb1SILyaZMfQuz5DCse0Da26Y-8t5Cv_nPNZZYtO8CEUhhZuaIwz0" />    <div className="form-horizontal">
+                            <form action="HOD/CreateSection" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="9VoIdSnaplP2kJk8caDA2b19kWHDL5FZMPBNnUz4ZVSzNY-_C4Q_pZXVjyMjDp3OFtATglj0Lxb7vb1SILyaZMfQuz5DCse0Da26Y-8t5Cv_nPNZZYtO8CEUhhZuaIwz0" />    <div className="form-horizontal">
                                 <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="SemesterNo">Semester No</label>
                                     <div className="col-md-10">
@@ -32,7 +32,7 @@ export default class AddSection extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Section">Back to List</Link>
+                                <Link to="HOD/Section">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

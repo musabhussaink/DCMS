@@ -9,7 +9,7 @@ export default class AddAlumni extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Add Alumni</h2>
-                            <form action="/Admin/CreateAlumni" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="iNWhWtJR7kO8zpu9yU7oqpJPQaTZIaoj-eJ2KzxafZ7dXNwrvY-B9iQ95AIIV7RIIX-oerkvY57V9KtEhIQPOw8tnPmKlgcyINvy2q7OTCXdF5nI4wE-1g1oN0nDPr6c0" />    <div className="form-horizontal">
+                            <form action="/HOD/CreateAlumni" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="iNWhWtJR7kO8zpu9yU7oqpJPQaTZIaoj-eJ2KzxafZ7dXNwrvY-B9iQ95AIIV7RIIX-oerkvY57V9KtEhIQPOw8tnPmKlgcyINvy2q7OTCXdF5nI4wE-1g1oN0nDPr6c0" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
                                 <div className="form-group">
@@ -55,7 +55,7 @@ export default class AddAlumni extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Alumni">Back to List</Link>
+                                <Link to="/HOD/Alumni">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

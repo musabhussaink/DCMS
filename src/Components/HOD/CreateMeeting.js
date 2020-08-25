@@ -9,7 +9,7 @@ export default class CreateMeeting extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Create Meeting</h2>
-                            <form action="/Admin/Section"><input name="__RequestVerificationToken" type="hidden" defaultValue="9VoIdSnaplP2kJk8caDA2b19kWHDL5FZMPBNnUz4ZVSzNY-_C4Q_pZXVjyMjDp3OFtATglj0Lxb7vb1SILyaZMfQuz5DCse0Da26Y-8t5Cv_nPNZZYtO8CEUhhZuaIwz0" />    <div className="form-horizontal">
+                            <form action="/HOD/Section"><input name="__RequestVerificationToken" type="hidden" defaultValue="9VoIdSnaplP2kJk8caDA2b19kWHDL5FZMPBNnUz4ZVSzNY-_C4Q_pZXVjyMjDp3OFtATglj0Lxb7vb1SILyaZMfQuz5DCse0Da26Y-8t5Cv_nPNZZYtO8CEUhhZuaIwz0" />    <div className="form-horizontal">
                                 <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="SemesterNo">Date</label>
                                     <div className="col-md-10">

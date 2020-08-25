@@ -8,7 +8,7 @@ export default class AddSession extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h3>Add Session</h3>
-                            <form action="/Admin/AddSession" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="dp1rMPG_WaeLFhrTLjyIfpfPkGylll_M7Ue86VX6uzrE59MWaEK90uXm0qaPrRFJMA5s6PHmKEKO9X_OBgUY-d915FItoadbcv1UxC3lq2ldaoMPdFsP0Udit0s2uppZ0" />    <div className="form-horizontal">
+                            <form action="HOD/AddSession" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="dp1rMPG_WaeLFhrTLjyIfpfPkGylll_M7Ue86VX6uzrE59MWaEK90uXm0qaPrRFJMA5s6PHmKEKO9X_OBgUY-d915FItoadbcv1UxC3lq2ldaoMPdFsP0Udit0s2uppZ0" />    <div className="form-horizontal">
                                 <hr />
                                 <div className="form-group">
                                     <label className="control-label col-md-2">Select Session</label>
@@ -59,7 +59,7 @@ export default class AddSession extends Component {
                             </div>
                             </form>
                             <div>
-                                <a href="/Admin/Session_View">View all Sessions</a>
+                                <a href="HOD/Session_View">View all Sessions</a>
                             </div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

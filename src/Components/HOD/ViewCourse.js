@@ -39,9 +39,9 @@ export default class ViewCourse extends Component {
                                             CSC21
               </td>
                                         <td>
-                                            <Link to="/Admin/EditCourse">Edit</Link> |
-                <Link to="/Admin/DetailsCourse">Details</Link> |
-                <a href="/Admin/DeleteCourse">Delete</a>
+                                            <Link to="/HOD/EditCourse">Edit</Link> |
+                <Link to="/HOD/DetailsCourse">Details</Link> |
+                <a href="/HOD/DeleteCourse">Delete</a>
                                         </td>
                                     </tr>
 

@@ -22,7 +22,7 @@ export default class ViewFaculty extends Component {
                             <table className="table table-striped table-condensed table-bordered">
                                 <tbody><tr>
                                     <th>
-                                        <a href="/Admin/Faculty?sortOrder=name_desc">Name</a>
+                                        <a href="/HOD/Faculty?sortOrder=name_desc">Name</a>
                                     </th>
                                     <th>
                                         Contact No.

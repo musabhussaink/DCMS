@@ -11,7 +11,7 @@ export default class IndustryFeedbackQuestion extends Component {
                             <br />
                             <h3>Industry Question(s)</h3>
                             <p>
-                                <Link className="btn btn-primary" style={{ float: 'right', marginBottom: '10px' }} to="/Admin/AddIndustryQuestion">Add question</Link>
+                                <Link className="btn btn-primary" style={{ float: 'right', marginBottom: '10px' }} to="/HOD/AddIndustryQuestion">Add question</Link>
                             </p>
                             <table className="table table-condensed table-striped table-bordered">
                                 <tbody><tr>
@@ -37,8 +37,8 @@ export default class IndustryFeedbackQuestion extends Component {
                                             Yes
               </td>
                                         <td>
-                                            <Link to="/Admin/EditIndustryQuestion">Edit</Link> |
-                                            <a href="/Admin/DeleteIndustryQuestion" onclick="return confirm('Are you sure you want to delete this question? All data related to this question might also be deleted.');">Delete</a>
+                                            <Link to="/HOD/EditIndustryQuestion">Edit</Link> |
+                                            <a href="/HOD/DeleteIndustryQuestion" onclick="return confirm('Are you sure you want to delete this question? All data related to this question might also be deleted.');">Delete</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -52,8 +52,8 @@ export default class IndustryFeedbackQuestion extends Component {
                                             Yes
               </td>
                                         <td>
-                                            <Link to="/Admin/EditIndustryQuestion">Edit</Link> |
-                                            <a href="/Admin/DeleteIndustryQuestion/4" onclick="return confirm('Are you sure you want to delete this question? All data related to this question might also be deleted.');">Delete</a>
+                                            <Link to="/HOD/EditIndustryQuestion">Edit</Link> |
+                                            <a href="/HOD/DeleteIndustryQuestion/4" onclick="return confirm('Are you sure you want to delete this question? All data related to this question might also be deleted.');">Delete</a>
                                         </td>
                                     </tr>
                                 </tbody></table>

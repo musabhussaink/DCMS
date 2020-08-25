@@ -9,7 +9,7 @@ export default class EditCourse extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Edit Course</h2>
-                            <form action="/Admin/EditCourse/1" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="uTkCnCRrBSEn1GqbxnDN2zQRDxQWcXwX7TRgbFaYIbSvTDseyvFvQVtHBJX4YY2vM1_KvVf5OKY-T_0X53tpKzmO7IlUufkx-33vGXpg2jd_GweYv8WMinUfGIQawRs80" />    <div className="form-horizontal">
+                            <form action="/HOD/EditCourse/1" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="uTkCnCRrBSEn1GqbxnDN2zQRDxQWcXwX7TRgbFaYIbSvTDseyvFvQVtHBJX4YY2vM1_KvVf5OKY-T_0X53tpKzmO7IlUufkx-33vGXpg2jd_GweYv8WMinUfGIQawRs80" />    <div className="form-horizontal">
                                 <hr />
                                 <input data-val="true" data-val-number="The field CourseID must be a number." data-val-required="The CourseID field is required." id="CourseID" name="CourseID" type="hidden" defaultValue={1} />
                                 <div className="form-group">
@@ -41,7 +41,7 @@ export default class EditCourse extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Course">Back to List</Link>
+                                <Link to="/HOD/Course">Back to List</Link>
                             </div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

@@ -23,7 +23,7 @@ export default class Header extends Component {
             <div>
                 <header className="top" style={{ backgroundColor: '#2c3e50' }}>
                     <div className="container">
-                        <a href="/Admin" className="navbar-brand" style={{ color: 'white', marginLeft: 22 }}>
+                        <a href="/HOC" className="navbar-brand" style={{ color: 'white', marginLeft: 22 }}>
                             Departmental Committee Management System</a>
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span className="glyphicon glyphicon-align-justify" />

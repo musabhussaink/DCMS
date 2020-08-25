@@ -45,8 +45,8 @@ export default class FacultyDetails extends Component {
                                 </dl>
                             </div>
                             <p>
-                                <Link to="/Admin/EditFaculty">Edit</Link> |
-                                <Link to="/Admin/Faculty">Back to List</Link>
+                                <Link to="/HOD/EditFaculty">Edit</Link> |
+                                <Link to="/HOD/Faculty">Back to List</Link>
                             </p>
                         </div>
                         {/* /.col-lg-12 */}

@@ -14,11 +14,11 @@ export default class ExcelAlumni extends Component {
                             <a href="/File/Get?mapPath=~%2FContent%2FSampleExcel&filename=SampleAlumni.xlsx">Download Sample Sheet</a>
                             <br />
                             <br />
-                            <form action="/Admin/ExcelAlumni" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
+                            <form action="/HOD/ExcelAlumni" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
                                 <input type="submit" defaultValue="Submit" className="btn btn-primary" id="button" />
                             </form><br />
                             <div>
-                                <Link to="/Admin/Faculty">Back to List</Link>
+                                <Link to="/HOD/Faculty">Back to List</Link>
                             </div>
 
                         </div>

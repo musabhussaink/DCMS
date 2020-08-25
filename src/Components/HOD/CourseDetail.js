@@ -33,8 +33,8 @@ export default class CourseDetail extends Component {
                                 </dl>
                             </div>
                             <p>
-                                <Link to="/Admin/EditCourse">Edit</Link> |
-                                <Link to="/Admin/Course">Back to List</Link>
+                                <Link to="/HOD/EditCourse">Edit</Link> |
+                                <Link to="/HOD/Course">Back to List</Link>
                             </p>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

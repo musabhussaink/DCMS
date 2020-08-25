@@ -9,7 +9,7 @@ export default class AddPLO extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Add a PLO</h2>
-                            <form action="/Admin/CreatePLO" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="hsfRMGTAdv_lLeATBKWEwpgR4NLMsmFI4iTpb25OkkwODLxNjMnlxBlx_hFJC3KjU0XRyMcJng5fX5e635DGtvF_S9Ql2d1_QtlBB5XoNCO2KwON4lJTzBk38Jw83i890" />    <div className="form-horizontal">
+                            <form action="HOD/CreatePLO" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="hsfRMGTAdv_lLeATBKWEwpgR4NLMsmFI4iTpb25OkkwODLxNjMnlxBlx_hFJC3KjU0XRyMcJng5fX5e635DGtvF_S9Ql2d1_QtlBB5XoNCO2KwON4lJTzBk38Jw83i890" />    <div className="form-horizontal">
                                 <hr />
                                 <input data-val="true" data-val-number="The field ProgramID must be a number." id="ProgramID" name="ProgramID" type="hidden" defaultValue />
                                 <div className="form-group">
@@ -27,7 +27,7 @@ export default class AddPLO extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/PLO">Back to List</Link>
+                                <Link to="HOD/PLO">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

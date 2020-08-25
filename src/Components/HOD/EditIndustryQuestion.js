@@ -9,7 +9,7 @@ export default class EditIndustryQuestion extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h3>Edit Question</h3>
-                            <form action="/Admin/EditIndustryQuestion/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="khfX4K6x2OVsJSPliSsYsyJnkx_FQO9ql0JUV7yW5bjFSVNPsyIWpLaJNWj0VtG-d1owDXnuQ7yz6M5zBbwm69TdA-H7UXGOVoOtI-fsYTzp-qTOz4rwqk9owapJpTC00" />    <div className="form-horizontal">
+                            <form action="/HOD/EditIndustryQuestion/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="khfX4K6x2OVsJSPliSsYsyJnkx_FQO9ql0JUV7yW5bjFSVNPsyIWpLaJNWj0VtG-d1owDXnuQ7yz6M5zBbwm69TdA-H7UXGOVoOtI-fsYTzp-qTOz4rwqk9owapJpTC00" />    <div className="form-horizontal">
                                 <hr />
                                 <input data-val="true" data-val-number="The field IndqID must be a number." data-val-required="The IndqID field is required." id="IndqID" name="IndqID" type="hidden" defaultValue={3} />
                                 <input data-val="true" data-val-number="The field AdminID must be a number." id="AdminID" name="AdminID" type="hidden" defaultValue={1004} />
@@ -36,7 +36,7 @@ export default class EditIndustryQuestion extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/IndustryQuestion">Back to List</Link>
+                                <Link to="/HOD/IndustryQuestion">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

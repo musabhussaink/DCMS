@@ -11,7 +11,7 @@ export default class MainHeader extends Component {
                     <div className="container">
                         <img src={require('../../Assets/comsats-logo.png')} alt="Image not available" style={{ float: 'left', marginBottom: 20 }} />
                         <a href="" className="navbar-brand pull-left" style={{ color: 'white', fontWeight: 'bold', fontSize: '2em', marginTop: 45 }}>
-                            Academic Program Evaluation Portal </a>
+                            Departmental Committee Management System </a>
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span className="glyphicon glyphicon-align-justify" />
                         </button>

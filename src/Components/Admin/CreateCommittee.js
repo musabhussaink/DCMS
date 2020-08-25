@@ -83,14 +83,15 @@ export default class CreateCommittee extends Component {
                                         <span className="field-validation-valid" data-valmsg-for="SectionNo" data-valmsg-replace="true" /> */}
                                     </div>
                                 </div>
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="SectionNo">Head of Committee</label>
                                     <div className="col-md-10">
-                                    <input type="search" className="form-control text-box single-line"></input>
+                                    <input type="search" className="form-control text-box single-line"></input> */}
                                         {/* <input className="form-control text-box single-line" data-val="true" data-val-required="The Section field is required." id="SectionNo" name="SectionNo" type="text" defaultValue /> eg. A,B,C...
                                         <span className="field-validation-valid" data-valmsg-for="SectionNo" data-valmsg-replace="true" /> */}
-                                    </div>
-                                </div>
+                                    {/* </div>
+                                </div> */}
+                                <br></br>
                                 <div className="form-group">
                                     <div className="col-md-offset-2 col-md-10">
                                         <input type="submit" defaultValue="Create" className="btn btn-default" />
@@ -99,7 +100,7 @@ export default class CreateCommittee extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Alumni">Back to List</Link>
+                                <Link to="/Admin/ViewCommittees">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

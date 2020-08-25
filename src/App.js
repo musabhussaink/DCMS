@@ -24,16 +24,16 @@ export default class App extends Component {
 
         
 
-        <Switch>
+        {/* <Switch>
         <Route path="/Admin" exact strict render={() => { return (<AdminRoutes />) }} />
         </Switch>
 
         <Switch>
         <Route path="/HOD" exact strict render={() => { return (<HODRouting/>) }} />
-        </Switch>
+        </Switch> */}
 
-          {/* <AdminRoutes></AdminRoutes> */}
-          {/* <HODRouting></HODRouting> */}
+          <AdminRoutes></AdminRoutes>
+          <HODRouting></HODRouting>
           <FacultyRouting></FacultyRouting>
           <HOCRouting></HOCRouting>
           <StudentRouting></StudentRouting>

@@ -34,8 +34,8 @@ export default class IndustryDetails extends Component {
                                 </dl>
                             </div>
                             <p>
-                                <Link to="/Admin/EditIndustry">Edit</Link> |
-                                <Link to="/Admin/Industry">Back to List</Link>
+                                <Link to="/HOD/EditIndustry">Edit</Link> |
+                                <Link to="/HOD/Industry">Back to List</Link>
                             </p>
                         </div>
                         {/* /.col-lg-12 */}

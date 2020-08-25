@@ -15,8 +15,8 @@ export default class extends Component {
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2 style={{marginLeft:"500px"}}>Dashboard</h2>
-                            <br></br>
+                        <h2 style={{marginLeft:"400px"}}>Welcome Back ! [Faculty Member] !</h2>
+                            <br></br><hr></hr>
                             <div>
                                 <hr></hr>
                             <table className="table table-striped table-dark">

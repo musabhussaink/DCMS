@@ -9,21 +9,22 @@ class ReportsSection extends Component {
             <div>
                 <div  id="page-wrapper" >
                     <div className="row">
-                    <h1>Auto Generated Report of the Selected Entity</h1>
-
-                        <div className="col">
-                            <div className="item">
-                                <h3>Chart #1</h3>
-                                <img alt="Image not available" src={require('../../Assets/ReportChart.png')} style={{ height: 300, width: 500 }} />
-                            </div>
-                        </div>
-                        <div className="col">
+                    <hr></hr><h1 style={{marginLeft:"150px" }}>Auto Generated Report of the Selected Entity</h1><hr>
+                    </hr>
+                    <table>
+                        <th><div className="item">
+                                <h3 style={{marginLeft:"250px" }}>Chart #1</h3><br></br><hr></hr>
+                                <img alt="Image not available" src={require('../../Assets/ReportChart2.jpg')} style={{ height: 250, width: 500 }} />
+                                <hr></hr>
+                            </div></th>
+                        <th>
                         <div className="item">
-                        <h3>Chart #2</h3>
-
-                                <img alt="Image not available" src={require('../../Assets/ReportChart1.gif')} style={{ height: 300, width: 500 }} />
+                                <h3 style={{marginLeft:"300px" }}>Chart #2</h3><br></br><hr></hr>
+                                <img alt="Image not available" src={require('../../Assets/ReportChart1.gif')} style={{ height: 250, width: 500,marginLeft:"100px" }} />
+                                <hr></hr>
                             </div>
-                        </div>
+                        </th>
+                    </table>
                     </div>
                 </div>
                 <br/><br/><br/><br/><br/>

@@ -59,7 +59,7 @@ import ReportHOC from './Components/HOD/ReportHOC'
 import ReportFaculty from './Components/HOD/ReportFaculty' 
 import ReportsSection from './Components/HOD/ReportsSection'
 import HODIndex from './Components/HOD/Index'
-
+import AssigningTask from './Components/HOD/AssigningTask'
 export default class HODRouting extends Component {
   render() {
     return (
@@ -83,18 +83,18 @@ export default class HODRouting extends Component {
 
         <Route path="/HOD/ReportsSection" exact strict render={() => { return (<ReportsSection/>) }} />
 
-        
-
-   
-
-
-
-
 
           {/* HOD Session Routes */}
           <Route path="/HOD/AssignTask" exact strict render={
             () => {
               return (<AssignTask />)
+            }
+          } />
+
+
+          <Route path="/HOD/AssigningTask" exact strict render={
+            () => {
+              return (<AssigningTask />)
             }
           } />
           <Route path="/HOD/AssignedTask" exact strict render={

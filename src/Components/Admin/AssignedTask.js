@@ -21,6 +21,9 @@ export default class AssignedTask extends Component {
                                         <th scope="col">Assigning Date</th>
                                         <th scope="col">Task Deadline</th>
                                         <th scope="col">Task Description</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+
                                         {/* <th scope="col">Assign</th> */}
                                     </tr>
                                 </thead>
@@ -33,7 +36,8 @@ export default class AssignedTask extends Component {
                                         <td>20-08-2020</td>
                                         <td>30-08-2020</td>
                                         <td>Description of Task Goes here</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>Submitted</td>
+                                        <td><Link to="/Admin/AssignedTask" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
                                             </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -43,7 +47,8 @@ export default class AssignedTask extends Component {
                                         <td>20-08-2020</td>
                                         <td>30-08-2020</td>
                                         <td>Description of Task Goes here</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>Submitted</td>
+                                        <td><Link to="/Admin/AssignedTask" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -53,16 +58,17 @@ export default class AssignedTask extends Component {
                                         <td>20-08-2020</td>
                                         <td>30-08-2020</td>
                                         <td>Description of Task Goes here</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td>Submitted</td>
+                                        <td><Link to="/Admin/AssignedTask" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div id="spinner" className="spinner" style={{ display: 'none' }}>
+                            {/* <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>
                                     <img id="img-spinner" src={`${process.env.PUBLIC_URL}/Assets/spinner.gif`} alt="Loading" style={{ position: 'absolute', height: 'auto!important', width: 'auto!important', left: '47%', top: '47%' }} /><br />
                                     <p style={{ position: 'absolute', height: 'auto !important', width: 'auto !important', left: '51%', top: '51%', fontSize: 20, color: 'white' }}>Please Wait</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         {/* /.col-lg-12 */}
                     </div>

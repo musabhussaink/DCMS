@@ -10,7 +10,7 @@ export default class ViewIndustry extends Component {
                         <div className="col-lg-12">
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
                             <h2>Industry</h2>
-                            <form action="/Admin/Industry" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
+                            <form action="/HOD/Industry" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
                                 <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
@@ -43,9 +43,9 @@ export default class ViewIndustry extends Component {
                                             <a href="mailto:kamran.bcs095@gmail.com">kamran.bcs095@gmail.com</a>
                                         </td>
                                         <td>
-                                            <Link to="/Admin/EditIndustry">Edit</Link> |
-                                            <Link to="/Admin/DetailsIndustry">Details</Link> |
-                                            <Link to="/Admin/DeleteIndustry">Delete</Link>
+                                            <Link to="/HOD/EditIndustry">Edit</Link> |
+                                            <Link to="/HOD/DetailsIndustry">Details</Link> |
+                                            <Link to="/HOD/DeleteIndustry">Delete</Link>
                                         </td>
                                     </tr>
                                 </tbody>

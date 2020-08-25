@@ -9,7 +9,7 @@ export default class AssignCourseFaculty extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <br />
-                            <form action="/Admin/FacultyCourse/3049" className="form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" defaultValue="FJw4nZbTvkdfk7549elgLntEaiLVw5LUEUWpsuBikhhBR66WimKm32VSfqpAObkuuOkuZfieTt9F1Tii5O8N3N-m5d_tIe5IOt7J1eeBx6DdAm2SL7Qg9up8BdRK1PKi0" /><div className="validation-summary-valid" data-valmsg-summary="true"><ul><li style={{ display: 'none' }} />
+                            <form action="/HOD/FacultyCourse/3049" className="form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" defaultValue="FJw4nZbTvkdfk7549elgLntEaiLVw5LUEUWpsuBikhhBR66WimKm32VSfqpAObkuuOkuZfieTt9F1Tii5O8N3N-m5d_tIe5IOt7J1eeBx6DdAm2SL7Qg9up8BdRK1PKi0" /><div className="validation-summary-valid" data-valmsg-summary="true"><ul><li style={{ display: 'none' }} />
                             </ul></div>    <h3>Faculty Name: Kamran</h3>
                                 <div id="CList">
                                     <div id="L1" style={{ display: 'flex' }}>
@@ -29,7 +29,7 @@ export default class AssignCourseFaculty extends Component {
                                     <input type="submit" defaultValue="Register" className="btn btn-primary" style={{ marginLeft: 5 }} />
                                 </div>
                             </form><br />
-                            <Link to="/Admin/Faculty">Back to Faculty</Link>
+                            <Link to="/HOD/Faculty">Back to Faculty</Link>
                         </div>
                         {/* /.col-lg-12 */}
                     </div>

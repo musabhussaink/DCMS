@@ -13,6 +13,24 @@ export default class Menu extends Component {
                                 <li>
                                     <Link to="/Admin">Dashboard</Link><i className="fa fa-dashboard fa-fw" />
                                 </li>
+                                <li className={2}>
+                                    <a href=""> Commitee<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <Link to="/Admin/ViewCommittees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Admin/CreateCommittee"> Create Commitee<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/Admin/ExcelCommittee"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        {/* <li>
+                                            <Link to="/Admin/CommitteeFeedbackQuestions"> Feedback Questions<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li> */}
+                                    </ul>
+                                    {/* /.nav-second-level */}
+                                </li>
                                 <li>
                                     <a href=""> Tasks<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
@@ -40,21 +58,7 @@ export default class Menu extends Component {
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
-                                <li className={30}>
-                                    <a href=""> Student<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
-                                    <ul className="nav nav-second-level">
-                                        <li>
-                                            <Link to="/Admin/Student"> View Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Admin/CreateStudent"> Add Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Admin/ExcelStudent"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                    </ul>
-                                    {/* /.nav-second-level */}
-                                </li>
+                                
                                 <li>
                                     <a href="">Members of Committees<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
@@ -86,10 +90,11 @@ export default class Menu extends Component {
                                     <a href=""> Head of Department<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
                                         <li>
-                                            <a href="/Admin/ViewHOD"> View Head of Department<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></a>
+                                            <Link to="/Admin/ViewHOD"> View Head of Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+
                                         </li>
                                         <li>
-                                            <a href="/Admin/AddHOD"> Add Head of Department<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></a>
+                                        <Link to="/Admin/AddHOD"> Add Head of Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
                                     </ul>
                                     {/* /.nav-second-level */}
@@ -109,24 +114,22 @@ export default class Menu extends Component {
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
-                                <li className={2}>
-                                    <a href=""> Commitee<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                <li className={30}>
+                                    <a href=""> Student<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
                                         <li>
-                                            <Link to="/Admin/ViewCommittees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                            <Link to="/Admin/Student"> View Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="/Admin/CreateCommittee"> Create Commitee<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                            <Link to="/Admin/CreateStudent"> Add Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
                                         <li>
-                                            <Link to="/Admin/ExcelCommittee"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Admin/CommitteeFeedbackQuestions"> Feedback Questions<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                            <Link to="/Admin/ExcelStudent"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
+                                
                                 <li className={1}>
                                     <a href=""> Reports<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">

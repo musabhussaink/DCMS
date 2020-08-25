@@ -14,7 +14,7 @@ export default class ExcelCommittee extends Component {
                             <a href="/File/Get?mapPath=~%2FContent%2FSampleExcel&filename=SampleAlumni.xlsx">Download Sample Sheet</a>
                             <br />
                             <br />
-                            <form action="/Admin/ExcelCommittee" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
+                            <form action="/HOD/ExcelCommittee" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
                                 <input type="submit" defaultValue="Submit" className="btn btn-primary" id="button" />
                             </form><br />
                             <div>

@@ -59,6 +59,8 @@ import ReportHOD from './Components/Admin/ReportHOD'
 import ReportHOC from './Components/Admin/ReportHOC'
 import ReportFaculty from './Components/Admin/ReportFaculty' 
 import ReportsSection from './Components/Admin/ReportsSection'
+import MeetingParticipants from './Components/Admin/MeetingParticipants'
+import AssigningTask from './Components/Admin/AssigningTask'
 
 export default class AdminRouting extends Component {
   render() {
@@ -83,11 +85,12 @@ export default class AdminRouting extends Component {
 
         <Route path="/Admin/ReportsSection" exact strict render={() => { return (<ReportsSection/>) }} />
 
+        {/* MeetingParticipants Route */}
+        <Route path="/Admin/MeetingParticipants" exact strict render={() => { return (<MeetingParticipants/>) }} />
+
+         {/* Assigning Task Route */}
+         <Route path="/Admin/AssigningTask" exact strict render={() => { return (<AssigningTask/>) }} />
         
-
-   
-
-
 
 
 

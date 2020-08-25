@@ -11,7 +11,7 @@ export default class ViewCommittees extends Component {
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
                             <h2>Committees in CS Department</h2>
                             <hr></hr>
-                            <form action="/Admin/ViewCommittees" method="get" onsubmit="return check(this) && false;">    <div style={{ display: 'flex' }}>
+                            <form action="/HOD/ViewCommittees" method="get" onsubmit="return check(this) && false;">    <div style={{ display: 'flex' }}>
                                 <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
@@ -45,9 +45,9 @@ export default class ViewCommittees extends Component {
                                         <td>30-08-2020</td>
                                         <td>20</td>
                                         <td>Description of Committee Goes here</td>
-                                        <td><Link to="/Admin/DeleteAlumni" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditAlumni" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>
+                                        <td><Link to="/HOD/ViewCommittees" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td><Link to="/HOD/ViewCommittees" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
+                                        <td><Link to="/HOD/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>
                                     
                                             </tr>
                                     <tr>
@@ -59,9 +59,9 @@ export default class ViewCommittees extends Component {
                                         <td>10-08-2020</td>
                                         <td>10</td>
                                         <td>Description of Committee Goes here</td>
-                                        <td><Link to="/Admin/DeleteAlumni" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditAlumni" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>
+                                        <td><Link to="/HOD/ViewCommittees" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td><Link to="/HOD/ViewCommittees" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
+                                        <td><Link to="/HOD/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -72,9 +72,9 @@ export default class ViewCommittees extends Component {
                                         <td>30-12-2020</td>
                                         <td>5</td>
                                         <td>Description of Committee Goes here</td>
-                                        <td><Link to="/Admin/DeleteAlumni" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditAlumni" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>                                    
+                                        <td><Link to="/HOD/DetailsAlumni" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        <td><Link to="/HOD/DetailsAlumni" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
+                                        <td><Link to="/HOD/DetailsAlumni" onClick={() => (window.confirm('Details the item?'))}><button className="btn btn-primary">Details</button></Link></td>                                    
                                     </tr>
                                 </tbody>
                             </table>

@@ -29,8 +29,8 @@ export default class ViewPLO extends Component {
                                             Identify performances that you expect of graduates and write them to complete the statement.
               </td>
                                         <td>
-                                            <Link to="/Admin/EditPLO">Edit</Link> |
-                                            <a href="/Admin/DeletePLO" onclick="return confirm('Are you sure to delete this PLO?');">Delete</a>
+                                            <Link to="/HOD/EditPLO">Edit</Link> |
+                                            <a href="/HOD/DeletePLO" onclick="return confirm('Are you sure to delete this PLO?');">Delete</a>
                                         </td>
                                     </tr>
                                 </tbody></table>

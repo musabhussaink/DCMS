@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 export default class AssignTask extends Component {
     render() {
@@ -22,19 +23,19 @@ export default class AssignTask extends Component {
                                         </select> */}
                                         {/* <span className="field-validation-valid" data-valmsg-for="SessionName" data-valmsg-replace="true" /> */}
                                     </div>
-                                    <label className="control-label col-md-2">Search by Role</label>
+                                    {/* <label className="control-label col-md-2">Search by Role</label>
                                     <div className="col-md-3">
                                         <select className="form-control" id="Year" name="Year">
                                             <option value={15}>Student</option>
                                             <option value={16}>Committee Members</option>
                                             <option value={17}>Faculty Members</option>
                                             <option value={18}>Head of Committee</option>
-                                            {/* <option value={19}>Admin</option>
+                                            <option value={19}>Admin</option>
                                             <option value={20}>20</option>
-                                            <option value={21}>21</option> */}
+                                            <option value={21}>21</option>
                                         </select>
-                                        {/* <span className="field-validation-valid" data-valmsg-for="Year" data-valmsg-replace="true" /> */}
-                                    </div>
+                                        <span className="field-validation-valid" data-valmsg-for="Year" data-valmsg-replace="true" />
+                                    </div> */}
                                 </div>
                                 <div className="form-group">
                                     <div className="col-md-offset-2 col-md-10">
@@ -62,27 +63,27 @@ export default class AssignTask extends Component {
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>Head of Department</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOC/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                             </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Jacob</td>
                                         <td>Thornton</td>
                                         <td>Head of Committee</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOC/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                         <td>Student</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOC/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                     </tr>
                                 </tbody>
                             </table>
                                     {/* Ending of table */}
                             <div>
-                                <a href="/Admin/Session_View">View all Assigned Tasks</a>
+                                <a href="/HOC/AssignedTask">View all Assigned Tasks</a>
                             </div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

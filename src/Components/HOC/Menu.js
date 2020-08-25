@@ -14,6 +14,20 @@ export default class Menu extends Component {
                                     <Link to="/HOC">Dashboard</Link><i className="fa fa-dashboard fa-fw" />
                                 </li>
                                 <li>
+                                    <a href=""> Committees<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <Link to="/HOC/Committees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/HOC/SetMilestone"> Set Milestone<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/HOC/ViewMilestone"> View Milestone<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a href=""> Tasks<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
                                         <li>
@@ -30,20 +44,7 @@ export default class Menu extends Component {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href=""> Committees<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
-                                    <ul className="nav nav-second-level">
-                                        <li>
-                                            <Link to="/HOC/Committees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/HOC/SetMilestone"> Set Milestone<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/HOC/ViewMilestone"> View Milestone<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                    </ul>
-                                </li>
+                                
                                 <li>
                                     <a href=" "> Meetings<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">

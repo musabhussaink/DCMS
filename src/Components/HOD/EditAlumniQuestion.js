@@ -9,7 +9,7 @@ export default class EditAlumniQuestion extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h3>Edit Question</h3>
-                            <form action="/Admin/EditAlumniQuestion/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="skQzh1NKpSb2Y42-ezHWUGJU5WILxWw9Mee6fEh63AXtttjul3ZwJDAtthwlx9EBHtyUl2hcaT1rpawP_rDAmn30lhtq3jShC7S8QkoIsJwJqINK0u6XcEtfUZdf6NmC0" />    <div className="form-horizontal">
+                            <form action="/HOD/EditAlumniQuestion/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="skQzh1NKpSb2Y42-ezHWUGJU5WILxWw9Mee6fEh63AXtttjul3ZwJDAtthwlx9EBHtyUl2hcaT1rpawP_rDAmn30lhtq3jShC7S8QkoIsJwJqINK0u6XcEtfUZdf6NmC0" />    <div className="form-horizontal">
                                 <hr />
                                 <input data-val="true" data-val-number="The field AlqID must be a number." data-val-required="The AlqID field is required." id="AlqID" name="AlqID" type="hidden" defaultValue={3} />
                                 <input data-val="true" data-val-number="The field AdminID must be a number." id="AdminID" name="AdminID" type="hidden" defaultValue={1004} />
@@ -36,7 +36,7 @@ export default class EditAlumniQuestion extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/AlumniQuestion">Back to Alumni questions</Link>
+                                <Link to="/HOD/AlumniQuestion">Back to Alumni questions</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

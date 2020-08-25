@@ -14,12 +14,12 @@ export default class ExcelStudents extends Component {
                             <a href="">Download Sample Sheet</a>
                             <br />
                             <br />
-                            <form action="/Admin/ExcelStudent" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
+                            <form action="/HOD/ExcelStudent" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
                                 <input type="submit" defaultValue="Submit" className="btn btn-primary" id="button" />
                             </form>
                             <br />
                             <div>
-                                <Link to="/Admin/Student">Back to List</Link>
+                                <Link to="/HOD/Student">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

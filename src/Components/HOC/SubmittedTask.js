@@ -8,7 +8,7 @@ export default class SubmittedTask extends Component {
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>List of Submitted Task</h2>
+                        <hr></hr> <h2>List of Submitted Tasks</h2><hr></hr>
                             <table className="table table-striped table-condensed table-bordered">
                                 <tbody><tr>
                                     <th>

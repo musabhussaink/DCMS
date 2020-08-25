@@ -11,11 +11,12 @@ export default class ViewHOD extends Component {
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
                             <h2>Head of Department</h2>
                             <hr></hr>
-                            <form action="/Admin/Mentor" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
-                                <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
+                            <form action="/HOD/Mentor" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
+                                <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> 
+                                {/* <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
-                                </select>
+                                </select> */}
                                 <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text" defaultValue />
                                 <input type="submit" defaultValue="Search" className="btn btn-primary" style={{ marginLeft: 5 }} />
                             </div>
@@ -31,7 +32,7 @@ export default class ViewHOD extends Component {
                                     <th>
                                         Email
                                     </th>
-                                    <th />
+                                    {/* <th /> */}
                                 </tr>
                                     <tr>
                                         <td>
@@ -43,11 +44,11 @@ export default class ViewHOD extends Component {
                                         <td>
                                             <a href="mailto:kamran_bcs095@yahoo.com">kamran_bcs095@yahoo.com</a>
                                         </td>
-                                        <td>
-                                            <Link to="/Admin/MentorCourse">Assign Course</Link> |
-                                            <Link to="/Admin/MentorDetails">Details</Link>  |
-                                            <Link to="/Admin/MentorDetails">Delete</Link>
-                                        </td>
+                                        {/* <td>
+                                            <Link to="/HOD/MentorCourse">Assign Course</Link> |
+                                            <Link to="/HOD/MentorDetails">Details</Link>  |
+                                            <Link to="/HOD/MentorDetails">Delete</Link>
+                                        </td> */}
                                     </tr>
                                 </tbody></table>
                         </div>

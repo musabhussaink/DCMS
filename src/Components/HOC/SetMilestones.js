@@ -9,7 +9,7 @@ export default class SetMilestones extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Set Milestone</h2>
-                            <form action="/Admin/CreateStudent" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="Pxn325IjnUF3956qEvOuuEStf-j6oo9Gulpsb7VXhHiPIjbMiwiX6ox-DfYvSpqFj8HsmNjvN8vjQR5ap8yPEqaAmjlHjbytUbnM6XFPuKtndKy9BDW0-zAvCAWdKU770" />    <div className="form-horizontal">
+                            <form action="/HOC/CreateStudent" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="Pxn325IjnUF3956qEvOuuEStf-j6oo9Gulpsb7VXhHiPIjbMiwiX6ox-DfYvSpqFj8HsmNjvN8vjQR5ap8yPEqaAmjlHjbytUbnM6XFPuKtndKy9BDW0-zAvCAWdKU770" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
                                 <div className="form-group">

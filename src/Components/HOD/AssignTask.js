@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 export default class AssignTask extends Component {
     render() {
@@ -62,21 +63,21 @@ export default class AssignTask extends Component {
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>Head of Department</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOD/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                             </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Jacob</td>
                                         <td>Thornton</td>
                                         <td>Head of Committee</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOD/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                         <td>Student</td>
-                                        <td><button className="btn btn-primary">Assign</button></td>
+                                        <td><Link to="/HOD/AssigningTask"><button className="btn btn-primary">Assign</button></Link></td>
                                     </tr>
                                 </tbody>
                             </table>

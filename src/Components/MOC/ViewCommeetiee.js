@@ -17,11 +17,11 @@ export default class ViewCommeetiee extends Component {
                                     <th>
                                         Sr.No
                                     </th>
-                                    <th>
+                                    {/* <th>
                                         <a href="/MOC/ViewCommeetiee  ?sortOrder=name_desc">Name</a>
-                                    </th>
+                                    </th> */}
                                     <th>
-                                        Member Of Commeetiee
+                                        Committee Name
                                     </th>
                                     <th>
                                         Role in Commeetiee
@@ -32,15 +32,15 @@ export default class ViewCommeetiee extends Component {
                                         <td>
                                             1.
                                         </td>
-                                        <td>
+                                        {/* <td>
 
                                             Rohan
+                                        </td> */}
+                                        <td>
+                                            FYP Committee
                                         </td>
                                         <td>
-                                            FYP Commeetiee
-                                        </td>
-                                        <td>
-                                            Head of Commeetiee
+                                            Head of Committee
                                         </td>
                                        
                                     </tr>
@@ -48,49 +48,46 @@ export default class ViewCommeetiee extends Component {
                                         <td>
                                             2.
                                         </td>
-                                        <td>
+                                        {/* <td>
 
                                             Kamran
+                                        </td> */}
+                                        <td>
+                                            Thesis Committee
                                         </td>
                                         <td>
-                                            Thesis Commeetiee
+                                            Member of Committee
                                         </td>
-                                        <td>
-                                            Member of Commeetiee
-                                        </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td>
                                             3.
                                         </td>
-                                        <td>
+                                        {/* <td>
 
                                             Musab
+                                        </td> */}
+                                        <td>
+                                            Evaluation Committee
                                         </td>
                                         <td>
-                                            Evaluation Commeetiee
+                                            Head of Committee
                                         </td>
-                                        <td>
-                                            Head of Commeetiee
-                                        </td>
-                                       
                                     </tr>
                                     <tr>
                                         <td>
                                             4.
                                         </td>
-                                        <td>
+                                        {/* <td>
 
                                             Shahid 
+                                        </td> */}
+                                        <td>
+                                            Thesis Committee
                                         </td>
                                         <td>
-                                            Thesis Commeetiee
+                                            Head of Committee
                                         </td>
-                                        <td>
-                                            Head of Commeetiee
-                                        </td>
-                                       
                                     </tr>
                                 </tbody></table>
                             <br />

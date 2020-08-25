@@ -34,7 +34,7 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>5</td>
                                         <td>Dr. Yasir Faheem</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        {/* <td><Link to="/HOD/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td> */}
                                             </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -45,7 +45,7 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>10</td>
                                         <td>Dr. Kamran Abbasi</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        {/* <td><Link to="/HOD/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td> */}
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -56,11 +56,11 @@ export default class UpcomingMeetings extends Component {
                                         <td>Room G05, CS Department</td>
                                         <td>20</td>
                                         <td>Dr. Rohan Ilyas</td>
-                                        <td><Link to="/Admin/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
+                                        {/* <td><Link to="/HOD/Session_View" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td> */}
                                     </tr>
                                 </tbody>
                             </table>
-        Page 1 of 1
+        {/* Page 1 of 1 */}
                         <div className="pagination-container"><ul className="pagination"><li className="active"><a>1</a></li></ul></div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

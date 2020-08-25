@@ -10,7 +10,7 @@ export default class ViewAlumni extends Component {
                         <div className="col-lg-12">
                             <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
                             <h2>Alumni</h2>
-                            <form action="/Admin/Alumni" method="get" onsubmit="return check(this) && false;">    <div style={{ display: 'flex' }}>
+                            <form action="/HOD/Alumni" method="get" onsubmit="return check(this) && false;">    <div style={{ display: 'flex' }}>
                                 <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
@@ -22,7 +22,7 @@ export default class ViewAlumni extends Component {
                             <table className="table table-striped table-condensed table-bordered">
                                 <tbody><tr>
                                     <th>
-                                        <a href="/Admin/Alumni?sortOrder=name_desc">Name</a>
+                                        <a href="/HOD/Alumni?sortOrder=name_desc">Name</a>
                                     </th>
                                     <th>
                                         Contact No.
@@ -55,9 +55,9 @@ export default class ViewAlumni extends Component {
                                             3.6
                                         </td>
                                         <td>
-                                            <Link to="/Admin/EditAlumni">Edit</Link> |
-                                            <Link to="/Admin/DetailsAlumni">Details</Link> |
-                                            <Link to="/Admin/DeleteAlumni">Delete</Link>
+                                            <Link to="/HOD/EditAlumni">Edit</Link> |
+                                            <Link to="/HOD/DetailsAlumni">Details</Link> |
+                                            <Link to="/HOD/DeleteAlumni">Delete</Link>
                                         </td>
                                     </tr>
                                 </tbody>

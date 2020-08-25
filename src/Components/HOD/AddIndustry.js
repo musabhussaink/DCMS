@@ -9,7 +9,7 @@ export default class AddIndustry extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Add Industry</h2>
-                            <form action="/Admin/CreateIndustry" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="rEVS8XelOe995XhArVukOzuY8isEIaxHVTZUJO2q-dnxuDAPviKSaSizs_Ur_CdX5XhRo9-3tjFL_SMqGFFBpCrEfDflvCzRlQR750ufV_ccAbt1W6yvCa8JB3HVxlWd0" />    <div className="form-horizontal">
+                            <form action="/HOD/CreateIndustry" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="rEVS8XelOe995XhArVukOzuY8isEIaxHVTZUJO2q-dnxuDAPviKSaSizs_Ur_CdX5XhRo9-3tjFL_SMqGFFBpCrEfDflvCzRlQR750ufV_ccAbt1W6yvCa8JB3HVxlWd0" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
                                 <div className="form-group">
@@ -41,7 +41,7 @@ export default class AddIndustry extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Industry">Back to List</Link>
+                                <Link to="HOD/Industry">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

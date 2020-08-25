@@ -13,6 +13,24 @@ export default class Menu extends Component {
                                 <li>
                                     <Link to="/HOD">Dashboard</Link><i className="fa fa-dashboard fa-fw" />
                                 </li>
+                                <li className={2}>
+                                    <a href=""> Commitee<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <Link to="/HOD/ViewCommittees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/HOD/CreateCommittee"> Create Commitee<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/HOD/ExcelCommittee"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/HOD/CommitteeFeedbackQuestions"> Feedback Questions<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                    </ul>
+                                    {/* /.nav-second-level */}
+                                </li>
                                 <li>
                                     <a href=""> Tasks<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
@@ -109,24 +127,7 @@ export default class Menu extends Component {
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
-                                <li className={2}>
-                                    <a href=""> Commitee<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
-                                    <ul className="nav nav-second-level">
-                                        <li>
-                                            <Link to="/HOD/ViewCommittees"> View Committees<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/HOD/CreateCommittee"> Create Commitee<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/HOD/ExcelCommittee"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/HOD/CommitteeFeedbackQuestions"> Feedback Questions<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                    </ul>
-                                    {/* /.nav-second-level */}
-                                </li>
+                                
                                 <li className={1}>
                                     <a href=""> Reports<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">

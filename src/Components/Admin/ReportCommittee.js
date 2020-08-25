@@ -12,11 +12,12 @@ export default class ReportCommittee extends Component {
                             <h2>Generate the Report of a Committee</h2>
                             <hr></hr>
                             <form action="/Admin/ViewCommittees" method="get" onsubmit="return check(this) && false;">    <div style={{ display: 'flex' }}>
-                                <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
+                                <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> 
+                                {/* <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
                                     <option value="Name">Search by Name</option>
                                     <option value="email">Search by Email</option>
-                                </select>
-                                <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text" defaultValue />
+                                </select> */}
+                                <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text"/>
                                 <input type="submit" defaultValue="Search" className="btn btn-primary" style={{ marginLeft: 5 }} />
                             </div>
                             </form><br />
@@ -26,11 +27,11 @@ export default class ReportCommittee extends Component {
                                         <th scope="col">#</th>
                                         <th scope="col">Committee Name</th>
                                         <th scope="col">Goal</th>
-                                        <th scope="col">Head</th>
+                                        {/* <th scope="col">Head</th>
                                         <th scope="col">Creation Date</th>
                                         <th scope="col">Desolving Date</th>
                                         <th scope="col">Total Members</th>
-                                        <th scope="col">Description</th>
+                                        <th scope="col">Description</th> */}
                                         {/* <th scope="col">Assign</th> */}
                                     </tr>
                                 </thead>
@@ -40,33 +41,33 @@ export default class ReportCommittee extends Component {
                                         
                                         <td>FYP Committee</td>
                                         <td>To Do FYP evaluation of Spring 2020</td>
-                                        <td>Kamran Abbasi</td>
+                                        {/* <td>Kamran Abbasi</td>
                                         <td>20-08-2020</td>
                                         <td>30-08-2020</td>
                                         <td>20</td>
-                                        <td>Description of Committee Goes here</td>
+                                        <td>Description of Committee Goes here</td> */}
                                         <td><Link to="/Admin/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
                                             </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Exams Committee</td>
                                         <td>To Do Exams evaluation of Spring 2020</td>
-                                        <td>Dr. Musab Khatri</td>
+                                        {/* <td>Dr. Musab Khatri</td>
                                         <td>20-07-2020</td>
                                         <td>10-08-2020</td>
                                         <td>10</td>
-                                        <td>Description of Committee Goes here</td>
+                                        <td>Description of Committee Goes here</td> */}
                                         <td><Link to="/Admin/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>Thesis Committee</td>
                                         <td>To Do Thesis evaluation of Fall 2020</td>
-                                        <td>Dr. Yasir Faheem</td>
+                                        {/* <td>Dr. Yasir Faheem</td>
                                         <td>20-10-2020</td>
                                         <td>30-12-2020</td>
                                         <td>5</td>
-                                        <td>Description of Committee Goes here</td>
+                                        <td>Description of Committee Goes here</td> */}
                                         <td><Link to="/Admin/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
                                         
                                     </tr>

@@ -9,7 +9,7 @@ export default class SectionCourse extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Section-Course</h2>
-                            <form action="/Admin/SectionCourse/7" className="form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" defaultValue="27_96HEugL9ESF5SbkbT8JC1RhpNLEm-maNJfTgCB1yPvE-AJ6MzafaymjbIf7m4nWS1g1JsP7XeNw8Y5evSffBr4gNKQK5-_Mmg4GMyj56PxpALzJHdqCB5D67yHoGb0" /><div className="validation-summary-valid" data-valmsg-summary="true"><ul><li style={{ display: 'none' }} />
+                            <form action="/HOD/SectionCourse/7" className="form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" defaultValue="27_96HEugL9ESF5SbkbT8JC1RhpNLEm-maNJfTgCB1yPvE-AJ6MzafaymjbIf7m4nWS1g1JsP7XeNw8Y5evSffBr4gNKQK5-_Mmg4GMyj56PxpALzJHdqCB5D67yHoGb0" /><div className="validation-summary-valid" data-valmsg-summary="true"><ul><li style={{ display: 'none' }} />
                             </ul></div>    <table className="table table-striped table-condensed table-bordered">
                                     <tbody><tr>
                                         <th>
@@ -98,7 +98,7 @@ export default class SectionCourse extends Component {
                                 <input type="submit" defaultValue="Assign courses" className="btn btn-primary" />
                             </form>
                             <br />
-                            <Link to="/Admin/Section">Back to sections</Link>
+                            <Link to="/HOD/Section">Back to sections</Link>
                             <br /><br />
                         </div>
                         {/* /.col-lg-12 */}

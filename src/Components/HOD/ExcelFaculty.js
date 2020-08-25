@@ -15,11 +15,11 @@ export default class ExcelFaculty extends Component {
                             <a href="">Download Sample Sheet</a>
                             <br />
                             <br />
-                            <form action="/Admin/ExcelFaculty" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
+                            <form action="/HOD/ExcelFaculty" encType="multipart/form-data" method="post">    <input type="file" name="file" className="btn btn-default" /><br />
                                 <input type="submit" defaultValue="Submit" className="btn btn-primary" id="button" />
                             </form><br />
                             <div>
-                                <Link to="/Admin/Faculty">Back to List</Link>
+                                <Link to="/HOD/Faculty">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

@@ -33,13 +33,13 @@ export default class AddHOD extends Component {
                                         <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" />
                                     </div>
                                 </div>
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="Roles" title="Leave both unticked for instructor only">Roles</label>
                                     <div className="col-md-10">
                                         <input type="checkbox" defaultValue="Mentor" name="facRole" title="Leave both unticked for instructor only" />Mentor &nbsp;
                                         <input type="checkbox" defaultValue="PEC" name="facRole" title="Leave both unticked for instructor only" />PEC
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="form-group">
                                     <div className="col-md-offset-2 col-md-10">
                                         <input type="submit" defaultValue="Create" className="btn btn-primary" />

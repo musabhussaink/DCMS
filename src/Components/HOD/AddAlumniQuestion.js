@@ -9,7 +9,7 @@ export default class AddAlumniQuestion extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h3>Add Question</h3>
-                            <form action="/Admin/AddAlumniQuestion" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="7pRk1fl9BFxzcaKYyYt25GmYdlW3RVi0sjNKXPnrot3ZLT-Z4L1KliiFaPNPaUPWYXhMagrCjHAkmDIddnxCP9ygGuIJ285Ncz1glvsVjTEdPans1BOr9yUkg47vaHqw0" />    <div className="form-horizontal">
+                            <form action="/HOD/AddAlumniQuestion" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="7pRk1fl9BFxzcaKYyYt25GmYdlW3RVi0sjNKXPnrot3ZLT-Z4L1KliiFaPNPaUPWYXhMagrCjHAkmDIddnxCP9ygGuIJ285Ncz1glvsVjTEdPans1BOr9yUkg47vaHqw0" />    <div className="form-horizontal">
                                 <hr />
                                 <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="Question">Question</label>
@@ -35,7 +35,7 @@ export default class AddAlumniQuestion extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/AlumniQuestion">Back to Alumni questions</Link>
+                                <Link to="/HOD/AlumniQuestion">Back to Alumni questions</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

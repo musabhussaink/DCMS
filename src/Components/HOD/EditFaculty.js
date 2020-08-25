@@ -9,7 +9,7 @@ export default class EditFaculty extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Edit</h2>
-                            <form action="/Admin/EditFaculty/3049" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="0YOG25W3qczC7hqn8owoi7v4Gb34glLiJLW3ryvgbekDJOk056L3ijKp9crDzIFdOhorj65z9WTxdBO8VDqiD28eGFgKOK2U5iNlB5WI_LjQPs0AfbkVoxHCdO4XHuSt0" />    <div className="form-horizontal">
+                            <form action="/HOD/EditFaculty/3049" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="0YOG25W3qczC7hqn8owoi7v4Gb34glLiJLW3ryvgbekDJOk056L3ijKp9crDzIFdOhorj65z9WTxdBO8VDqiD28eGFgKOK2U5iNlB5WI_LjQPs0AfbkVoxHCdO4XHuSt0" />    <div className="form-horizontal">
                                 <h4>Faculty</h4>
                                 <hr />
                                 <input data-val="true" data-val-number="The field FacultyID must be a number." data-val-required="The FacultyID field is required." id="FacultyID" name="FacultyID" type="hidden" defaultValue={3049} />
@@ -51,7 +51,7 @@ export default class EditFaculty extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Faculty">Back to List</Link>
+                                <Link to="/HOD/Faculty">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

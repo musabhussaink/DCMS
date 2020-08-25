@@ -8,7 +8,7 @@ export default class AddHOC extends Component {
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>Add New HOD</h2>
+                            <h2>Add New HOC</h2>
                             <form action="/Admin/AddHOC"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
@@ -33,11 +33,19 @@ export default class AddHOC extends Component {
                                         <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" />
                                     </div>
                                 </div>
+                                {/* <div className="form-group">
+                                    <label className="control-label col-md-2" htmlFor="Email">Select the Committee</label>
+                                    <div className="col-md-10"> */}
+                                        {/* <input className="form-control text-box single-line" data-val="true" data-val-email="Invalid Email Address!" data-val-length="The field Email must be a string with a maximum length of 40." data-val-length-max={40} data-val-required="The Email field is required." id="Email" name="Email" type="email" defaultValue /> */}
+                                        {/* <input type="search"/> */}
+                                        {/* <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" /> */}
+                                    {/* </div>
+                                </div> */}
                                 <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Roles" title="Leave both unticked for instructor only">Roles</label>
+                                    <label className="control-label col-md-2" htmlFor="Roles" title="Leave both unticked for instructor only">Select The Committee</label>
                                     <div className="col-md-10">
-                                        <input type="checkbox" defaultValue="Mentor" name="facRole" title="Leave both unticked for instructor only" />Mentor &nbsp;
-                                        <input type="checkbox" defaultValue="PEC" name="facRole" title="Leave both unticked for instructor only" />PEC
+                                        <input type="checkbox" defaultValue="FYP" name="facRole" title="Leave both unticked for instructor only" />FYP &nbsp;
+                                        <input type="checkbox" defaultValue="Exam" name="facRole" title="Leave both unticked for instructor only" />Exam Committee
                                     </div>
                                 </div>
                                 <div className="form-group">

@@ -9,7 +9,7 @@ export default class AddCommitteeMembers extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h3>Add Member to a Committee</h3>
-                            <form action="/Admin/AddCommitteeMembers" encType="multipart/form-data"><input name="__RequestVerificationToken" type="hidden" defaultValue="bpUdLmTWPRJn4lM9tEDR5BHKcgKacwOMZ289ij61XUkakpUuqQhAaAq7LaAtYyoMqebf5ZhvW_JdjDyYrwZWq29apopxi93SKbMGWMoaEaC6ZtkFKCavZ9xNviJtz0s60" />    <div className="form-horizontal">
+                            <form action="/HOD/AddCommitteeMembers" encType="multipart/form-data"><input name="__RequestVerificationToken" type="hidden" defaultValue="bpUdLmTWPRJn4lM9tEDR5BHKcgKacwOMZ289ij61XUkakpUuqQhAaAq7LaAtYyoMqebf5ZhvW_JdjDyYrwZWq29apopxi93SKbMGWMoaEaC6ZtkFKCavZ9xNviJtz0s60" />    <div className="form-horizontal">
                                 <hr />
                                 <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="Code">Select the Committee</label>
@@ -55,7 +55,7 @@ export default class AddCommitteeMembers extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/ViewCommitteeMembers">Back to List</Link>
+                                <Link to="/HOD/ViewCommitteeMembers">Back to List</Link>
                             </div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>

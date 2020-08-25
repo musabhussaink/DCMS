@@ -28,7 +28,7 @@ export default class SessionView extends Component {
                                             06-Dec-14 12:36:19 PM
               </td>
                                         <td>
-                                            <Link to="/Admin/DeleteSession/1" onClick={() => (window.confirm('Delete the item?'))}>Delete</Link>
+                                            <Link to="/HOD/DeleteSession/1" onClick={() => (window.confirm('Delete the item?'))}>Delete</Link>
                                         </td>
                                     </tr>
                                 </tbody></table>

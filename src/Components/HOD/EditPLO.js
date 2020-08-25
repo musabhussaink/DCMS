@@ -9,7 +9,7 @@ export default class EditPLO extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Edit PLO</h2>
-                            <form action="/Admin/EditPLO/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="CuoBPRYbEkt7__aKtcJNXHKZzqLymvdhBeW2eJ1KzKoVZ2V9SlAVkdgiIxwSzZ54P7lsvFlP-K5-yD6QJVnUjBLnXRJ9wtrult6txM_GDenww9kyQx4n69fUbbljAUvj0" />    <div className="form-horizontal">
+                            <form action="/HOD/EditPLO/3" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="CuoBPRYbEkt7__aKtcJNXHKZzqLymvdhBeW2eJ1KzKoVZ2V9SlAVkdgiIxwSzZ54P7lsvFlP-K5-yD6QJVnUjBLnXRJ9wtrult6txM_GDenww9kyQx4n69fUbbljAUvj0" />    <div className="form-horizontal">
                                 <hr />
                                 <input data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="ID" name="ID" type="hidden" defaultValue={3} />
                                 <input data-val="true" data-val-number="The field ProgramID must be a number." id="ProgramID" name="ProgramID" type="hidden" defaultValue={1} />
@@ -28,7 +28,7 @@ export default class EditPLO extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/PLO">Back to List</Link>
+                                <Link to="/HOD/PLO">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

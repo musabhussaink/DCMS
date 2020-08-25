@@ -18,9 +18,10 @@ export default class ReportCM extends Component {
                                         <th scope="col">Last Name</th>
                                         <th scope="col">Major Role</th>
                                         <th scope="col">Committee Name</th>
-                                        <th scope="col">Assigning Date</th>
+                                        <th></th>
+                                        {/* <th scope="col">Assigning Date</th>
                                         <th scope="col">Task Deadline</th>
-                                        <th scope="col">Task Description</th>
+                                        <th scope="col">Task Description</th> */}
                                         {/* <th scope="col">Assign</th> */}
                                     </tr>
                                 </thead>
@@ -31,10 +32,10 @@ export default class ReportCM extends Component {
                                         <td>Otto</td>
                                         <td>Head of Department</td>
                                         <td>FYP Committee</td>
-                                        <td>20-08-2020</td>
+                                        {/* <td>20-08-2020</td>
                                         <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td>
-                                        <td><Link to="/Admin/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
+                                        <td>Description of Task Goes here</td> */}
+                                        <td><Link to="/HOD/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
 
                                     
                                             </tr>
@@ -44,10 +45,10 @@ export default class ReportCM extends Component {
                                         <td>Thornton</td>
                                         <td>Head of Committee</td>
                                         <td>Thesis Committee</td>
-                                        <td>20-08-2020</td>
+                                        {/* <td>20-08-2020</td>
                                         <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td>
-                                        <td><Link to="/Admin/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
+                                        <td>Description of Task Goes here</td> */}
+                                        <td><Link to="/HOD/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
 
                                                                             </tr>
                                     <tr>
@@ -56,9 +57,9 @@ export default class ReportCM extends Component {
                                         <td>the Bird</td>
                                         <td>Student</td>
                                         <td>Exams Committee</td>
-                                        <td>20-08-2020</td>
+                                        {/* <td>20-08-2020</td>
                                         <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td>
+                                        <td>Description of Task Goes here</td> */}
                                         <td><Link to="/HOD/ReportsSection" onClick={() => (window.confirm('Generate the Report?'))}><button className="btn btn-primary">Generate Report</button></Link></td>
                                     </tr>
                                 </tbody>

@@ -8,8 +8,8 @@ export default class AddHOC extends Component {
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>Add New HOD</h2>
-                            <form action="/Admin/AddHOC"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
+                            <h2>Add New HOC</h2>
+                            <form action="/HOD/AddHOC"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
                                 <div className="form-group">
@@ -33,13 +33,13 @@ export default class AddHOC extends Component {
                                         <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" />
                                     </div>
                                 </div>
-                                <div className="form-group">
+                                {/* <div className="form-group">
                                     <label className="control-label col-md-2" htmlFor="Roles" title="Leave both unticked for instructor only">Roles</label>
                                     <div className="col-md-10">
                                         <input type="checkbox" defaultValue="Mentor" name="facRole" title="Leave both unticked for instructor only" />Mentor &nbsp;
                                         <input type="checkbox" defaultValue="PEC" name="facRole" title="Leave both unticked for instructor only" />PEC
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="form-group">
                                     <div className="col-md-offset-2 col-md-10">
                                         <input type="submit" defaultValue="Create" className="btn btn-primary" />

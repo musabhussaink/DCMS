@@ -21,6 +21,7 @@ import SubmittedTask from './Components/HOC/SubmittedTask'
 import ReportCM from './Components/HOC/ReportCM'
 import ReportCommittee from './Components/HOC/ReportCommittee'
 import ReportsSection from './Components/HOC/ReportsSection'
+import AssigningTask from './Components/HOC/AssigningTask'
 
 
 import FacultyIndex from './Components/Faculty/Index'
@@ -40,6 +41,8 @@ export default class HOCRouting extends Component {
           <Route path="/HOC" exact strict render={() => { return (<Index />) }} />
 
 
+          
+          
           {/* HOC Committees Routes */}
           <Route path="/HOC/Committees" exact strict render={
             () => {
@@ -95,6 +98,14 @@ export default class HOCRouting extends Component {
               return (<AssignTask />)
             }
           } />
+
+            {/* HOC Task Routes */}
+            <Route path="/HOC/AssigningTask" exact strict render={
+            () => {
+              return (<AssigningTask />)
+            }
+          } />
+          
           <Route path="/HOC/AssignedTask" exact strict render={
             () => {
               return (<AssignedTask />)

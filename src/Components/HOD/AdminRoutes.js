@@ -14,12 +14,12 @@ export default class AdminRoutes extends Component {
                     <Menu />
 
                     {/*Admin Session Routes */}
-                    <Route path="/Admin/AddSession" exact strict render={
+                    <Route path="HOD/AddSession" exact strict render={
                         () => {
                             return (<AddSession/>)
                         }
                     } />
-                    <Route path="/Admin/Session_View" exact strict render={
+                    <Route path="HOD/Session_View" exact strict render={
                         () => {
                             return (<SessionView/>)
                         }

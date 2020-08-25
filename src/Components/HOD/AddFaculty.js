@@ -9,7 +9,7 @@ export default class AddFaculty extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Add Faculty</h2>
-                            <form action="/Admin/CreateFaculty" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
+                            <form action="/HOD/CreateFaculty" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
                                 <hr />
                                 <input id="Password" name="Password" type="hidden" defaultValue />
                                 <div className="form-group">
@@ -48,7 +48,7 @@ export default class AddFaculty extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Faculty">Back to List</Link>
+                                <Link to="/HOD/Faculty">Back to List</Link>
                             </div>
                         </div>
                         {/* /.col-lg-12 */}

@@ -9,7 +9,7 @@ export default class EditIndustry extends Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Edit</h2>
-                            <form action="/Admin/EditIndustry/6" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="WVqiBEIswygmImxIU6D-YK1dv53LppU7Rm7dcuKslQCD-1nIkTnE5zwcz0k0fLC0mB8e9I4Y9JRqBsjyF_wileFeTrnBZgKzDU3_6txnQW5dzMYDh2Zir_FUcZlh-Y500" />    <div className="form-horizontal">
+                            <form action="/HOD/EditIndustry/6" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="WVqiBEIswygmImxIU6D-YK1dv53LppU7Rm7dcuKslQCD-1nIkTnE5zwcz0k0fLC0mB8e9I4Y9JRqBsjyF_wileFeTrnBZgKzDU3_6txnQW5dzMYDh2Zir_FUcZlh-Y500" />    <div className="form-horizontal">
                                 <h4>Industry</h4>
                                 <hr />
                                 <input data-val="true" data-val-number="The field IndustryID must be a number." data-val-required="The IndustryID field is required." id="IndustryID" name="IndustryID" type="hidden" defaultValue={6} />
@@ -43,7 +43,7 @@ export default class EditIndustry extends Component {
                             </div>
                             </form>
                             <div>
-                                <Link to="/Admin/Industry">Back to List</Link>
+                                <Link to="/HOD/Industry">Back to List</Link>
                             </div>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>
