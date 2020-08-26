@@ -78,7 +78,6 @@ export default class Login extends Component {
                     </div>
                 </div>
             </div>
-
         )
         function login(e){
             e.preventDefault();

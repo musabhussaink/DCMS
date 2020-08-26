@@ -35,9 +35,9 @@ export default class ViewMilestone extends Component {
               </td>
                                 
                                         <td>
-                                            <Link to="/MOC/EditMilestone">Edit</Link> |
-                <Link to="/MOC/MilestoneDetail">Details</Link> |
-                <a href="/MOC/DeleteMilestone">Delete</a>
+                                            <Link to="/MOC/ViewMilestone">Submit</Link>
+                {/* <Link to="/MOC/MilestoneDetail">Details</Link> |
+                <a href="/MOC/DeleteMilestone">Delete</a> */}
                                         </td>
                                     </tr>
 

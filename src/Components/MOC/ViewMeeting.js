@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default class ViewMeeting extends Component {
     render() {
@@ -8,29 +8,61 @@ export default class ViewMeeting extends Component {
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                            <br />
-                            <h3>Meetings</h3>
-                            <table className="table table-bordered table-condensed table-striped">
+                            <h2>Recent Meeting Details</h2>
+                            <hr></hr>
+                            <table className="table table-striped table-condensed table-bordered">
                                 <tbody><tr>
                                     <th>
-                                        Meeting
+                                        Meeting ID
               </th>
                                     <th>
-                                        Start Date
+                                        Date
+              </th>
+                                    <th>
+                                        Time
+              </th>
+              <th>
+                                        Duration
+              </th>
+              <th>
+                                        Agenda
+              </th>
+              <th>
+                                        Venue
+              </th>
+              <th>
+                                        participants Invited
               </th>
                                     <th />
                                 </tr>
                                     <tr>
                                         <td>
-                                            FA14
+                                            1
               </td>
                                         <td>
-                                            06-Dec-14 12:36:19 PM
+                                            20-08-2020
               </td>
                                         <td>
-                                            <Link to="/MOC/DeleteSession/1" onClick={() => (window.confirm('Delete the item?'))}>Delete</Link>
+                                            9:00 am
+              </td>
+              <td>
+                                            1 hour
+              </td>
+                                        <td>
+                                            Scope discussion
+              </td>
+                                        <td>
+                                            room G06, CS Department
+              </td>
+              <td>
+                                            7
+              </td>
+                                        <td>
+                                        
+                <a href="/MOC/AddMeeting">Delete</a>
                                         </td>
                                     </tr>
+
                                 </tbody></table>
                             <div id="spinner" className="spinner" style={{ display: 'none' }}>
                                 <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>
@@ -45,7 +77,6 @@ export default class ViewMeeting extends Component {
                 </div>
                 <hr />
             </div>
-
 
         )
     }
