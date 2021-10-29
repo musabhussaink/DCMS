@@ -18,7 +18,7 @@ class AssigningTask extends Component {
                         </div>
                         <label> Select the Deadline </label><br></br>
                             <input type="date"/><br></br><br></br>
-                        <Link to="/HOC/AssignedTask"><button type="submit">Submit</button></Link>
+                        <Link to="/HOC/AssignedTaskHoc"><button type="submit">Submit</button></Link>
                         {/* <input type="date"/> */}
                     </div>
 

@@ -19,6 +19,10 @@ export default class Header extends Component {
     }
 
     render() {
+        const handleLogout = () => {
+            localStorage.setItem('token', '');
+            localStorage.setItem('role', '');
+        }
         return (
             <div>
                 <header className="top" style={{ backgroundColor: '#2c3e50' }}>
@@ -50,7 +54,7 @@ export default class Header extends Component {
                         </div>
                         <div style={{ marginTop: 32 }}>
                             <a className="btn btn-info" href="/HOC" style={{ float: 'left' }}>Change Password</a>
-                            <a className="btn btn-info" href="/" style={{ float: 'right' }}>Logout</a>
+                            <a className="btn btn-info" href="/" onClick={handleLogout} style={{ float: 'right' }}>Logout</a>
                         </div>
                     </div>
                 </div>

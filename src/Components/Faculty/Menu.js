@@ -23,6 +23,14 @@ export default class Menu extends Component {
                                     
                                 </li> */}
                                 <li>
+                                    <a href="#"> Tasks<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
+                                    <ul className="nav nav-second-level">
+                                        <li>
+                                            <Link to="/Faculty/ViewTasks"> View Tasks<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a href="#"> FYP Management<span className="fa fa-chevron-right" style={{ float: 'right' }} /></a>
                                     <ul className="nav nav-second-level">
                                         <li>

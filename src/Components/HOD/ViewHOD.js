@@ -1,60 +1,83 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css"
 
 export default class ViewHOD extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            posts: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3306/viewDetailsHOD";
+        fetch(url, {
+            method: "GET"
+        }).then(response => response.json()).then(post => {
+            this.setState({posts: post.result})
+        })
+    }
+
     render() {
+        const columns = [ 
+            {
+                Header: "Name",
+                accessor: "Name",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            {
+                Header: "Contact",
+                accessor: "PhoneNo",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            {
+                Header: "Email",
+                accessor: "Email",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            {
+                Header: "Status",
+                accessor: "StatusName",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            }
+        ]
         return (
-            <div>
-                <div id="page-wrapper" style={{}}>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
-                            <h2>Head of Department</h2>
-                            <hr></hr>
-                            <form action="/HOD/Mentor" method="get" onsubmit="return check(this) && false;">        <div style={{ display: 'flex' }}>
-                                <p style={{ paddingTop: 7, marginLeft: 20 }}> <b>Search:</b></p> 
-                                {/* <select className="form-control" id="ListItems" name="ListItems" style={{ marginLeft: 5 }}><option selected="selected" value>Select Search Criteria</option>
-                                    <option value="Name">Search by Name</option>
-                                    <option value="email">Search by Email</option>
-                                </select> */}
-                                <p style={{ paddingTop: 7 }} /> <input className="form-control" id="SearchString" name="SearchString" style={{ marginLeft: 5 }} type="text" defaultValue />
-                                <input type="submit" defaultValue="Search" className="btn btn-primary" style={{ marginLeft: 5 }} />
-                            </div>
-                            </form><hr></hr>
-                            <table className="table table-striped table-condensed table-bordered">
-                                <tbody><tr>
-                                    <th>
-                                        Name
-                                    </th>
-                                    <th>
-                                        Contact No.
-                                    </th>
-                                    <th>
-                                        Email
-                                    </th>
-                                    {/* <th /> */}
-                                </tr>
-                                    <tr>
-                                        <td>
-                                            Kamran Abdul Sattar
-                                        </td>
-                                        <td>
-                                            0312-5262885
-                                        </td>
-                                        <td>
-                                            <a href="mailto:kamran_bcs095@yahoo.com">kamran_bcs095@yahoo.com</a>
-                                        </td>
-                                        {/* <td>
-                                            <Link to="/HOD/MentorCourse">Assign Course</Link> |
-                                            <Link to="/HOD/MentorDetails">Details</Link>  |
-                                            <Link to="/HOD/MentorDetails">Delete</Link>
-                                        </td> */}
-                                    </tr>
-                                </tbody></table>
-                        </div>
-                        {/* /.col-lg-12 */}
+            <div id="page-wrapper" style={{}}>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+                        <h2>Head of Department</h2>
+                        <hr></hr>
+                        <ReactTable className = "-striped -highlight"
+                            columns = {columns}
+                            data = {
+                                this.state.posts
+                            }
+                            filterable
+                            defaultPageSize = {10}
+                            noDataText = {"Please Wait.."}
+                            pageSizeOptions = {[2,4,6]}
+                            >
+                        </ReactTable>
                     </div>
-                    {/* /.row */}
                 </div>
                 <hr />
             </div>

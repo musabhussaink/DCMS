@@ -1,3 +1,4 @@
+var database= require('../database/connectionDB')
 var express = require('express');
 var router = express.Router();
 

@@ -1,81 +1,133 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css"
 
 export default class ViewCommitteeMembers extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            posts: []
+        }
+    }
+    
+    componentDidMount() {
+        const url = "http://localhost:3306/viewCMADMIN";
+        fetch(url, {
+            method: "GET"
+        }).then(response => response.json()).then(post => {
+            this.setState({posts: post.result})
+        })
+    }
+    detailsRow(id){
+
+    }
     render() {
+        const columns = [ 
+            {
+                Header: "Name",
+                accessor: "Name",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            {
+                Header: "Contact",
+                accessor: "PhoneNo",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            // {
+            //     Header: "Major Role",
+            //     accessor: "PhoneNo",
+            //     sortable: false
+            // },
+            {
+                Header: "Committee Name",
+                accessor: "CommitteeName",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' }
+            },
+            {
+                Header: "Email",
+                accessor: "Email",
+                style:{
+                    textAlign:"center"
+                },
+                headerStyle: { fontWeight: 'bold' },
+                sortable: false
+            },
+            // {
+            //     Header: "Actions",
+            //     headerStyle: { fontWeight: 'bold' },
+            //     Cell: props => {
+            //         return( 
+            //             <button className="btn btn-danger" onClick={e => {this.deleteRow(props.original.idCommittee)}}><i className="fas fa-trash"></i>Delete</button>
+            //         )
+            //     },
+            //     sortable: false,
+            //     filterable: false,
+            //     width: 100,
+            //     maxWidth: 100,
+            //     minWidth: 100
+            // },
+            // {
+            //     Header: "Actions",
+            //     headerStyle: { fontWeight: 'bold' },
+            //     Cell: props => {
+            //         return(
+            //             <button className="btn btn-Warning" onClick={() => { this.updateRow(props.original.idCommittee)}}><i className="fas fa-edit"></i> Edit</button>
+            //         )
+            //     },
+            //     sortable: false,
+            //     filterable: false,
+            //     width: 100,
+            //     maxWidth: 100,
+            //     minWidth: 100
+            // }
+            
+            // {
+            //     Header: "Actions",
+            //     headerStyle: { fontWeight: 'bold' },
+            //     Cell: props => {
+            //         return(
+            //             // <a href="" className="btn btn-sm btn-danger"> Delete</a> 
+            //             <Link to="" onClick={() => { console.log(props.row._original);this.detailsRow(props.row.idUser)}}><button className="btn btn-primary">Details</button></Link>
+            //         )
+            //     },
+            //     sortable: false,
+            //     filterable: false,
+            //     width: 100,
+            //     maxWidth: 100,
+            //     minWidth: 100
+            // }
+        ]
         return (
-            <div>
-                <div id="page-wrapper" style={{}}>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h2>Members of All Committees</h2>
-                            <hr></hr>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Major Role</th>
-                                        <th scope="col">Committee Name</th>
-                                        {/* <th scope="col">Assigning Date</th>
-                                        <th scope="col">Task Deadline</th>
-                                        <th scope="col">Task Description</th> */}
-                                        {/* <th scope="col">Assign</th> */}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>Head of Department</td>
-                                        <td>FYP Committee</td>
-                                        {/* <td>20-08-2020</td>
-                                        <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td> */}
-                                        <td><Link to="/Admin/DeleteCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Details</button></Link></td>
-                                    
-                                            </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>Head of Committee</td>
-                                        <td>Thesis Committee</td>
-                                        {/* <td>20-08-2020</td>
-                                        <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td> */}
-                                        <td><Link to="/Admin/DeleteCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditCourse" onClick={() => (window.confirm('Edit the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsCourse" onClick={() => (window.confirm('Details of this item?'))}><button className="btn btn-primary">Details</button></Link></td>                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>Student</td>
-                                        <td>Exams Committee</td>
-                                        {/* <td>20-08-2020</td>
-                                        <td>30-08-2020</td>
-                                        <td>Description of Task Goes here</td> */}
-                                        <td><Link to="/Admin/DeleteCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Delete</button></Link></td>
-                                        <td><Link to="/Admin/EditCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Edit</button></Link></td>
-                                        <td><Link to="/Admin/DetailsCourse" onClick={() => (window.confirm('Delete the item?'))}><button className="btn btn-primary">Details</button></Link></td>                                    </tr>
-                                </tbody>
-                            </table>
-                                            
-                            <div id="spinner" className="spinner" style={{ display: 'none' }}>
-                                <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>
-                                    <img id="img-spinner" src={`${process.env.PUBLIC_URL}/Assets/spinner.gif`} alt="Loading" style={{ position: 'absolute', height: 'auto!important', width: 'auto!important', left: '47%', top: '47%' }} /><br />
-                                    <p style={{ position: 'absolute', height: 'auto !important', width: 'auto !important', left: '51%', top: '51%', fontSize: 20, color: 'white' }}>Please Wait</p>
-                                </div>
-                            </div>
-                        </div>
-                        {/* /.col-lg-12 */}
+            <div id="page-wrapper" style={{}}>
+                <div className="row">
+                    <div className="col-lg-12">
+                        <h2>Members of All Committees</h2>
+                        <hr></hr>
+                        <ReactTable className = "-striped -highlight"
+                            columns = {columns}
+                            data = {
+                                this.state.posts
+                            }
+                            filterable
+                            defaultPageSize = {10}
+                            noDataText = {"Please Wait.."}
+                            pageSizeOptions = {[2,4,6]}
+                            >
+                        </ReactTable>
                     </div>
-                    {/* /.row */}
                 </div>
                 <hr />
             </div>

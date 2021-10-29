@@ -8,6 +8,7 @@ import Route from 'react-router-dom/Route';
 import ViewCommittee from './Components/Faculty/ViewCommittee'
 import ViewProjects from './Components/Faculty/ViewProjects'
 import ViewThesis from './Components/Faculty/ViewThesis'
+import ViewTask from './Components/Faculty/viewTask'
 
 export default class FacultyRouting extends Component {
   render() {
@@ -23,6 +24,11 @@ export default class FacultyRouting extends Component {
           <Route path="/Faculty" render={() => { return (<Menu />) }} />
           <Route path="/Faculty" exact strict render={() => { return (<Index />) }} />
           
+          <Route path="/Faculty/ViewTasks" exact strict render={
+            () => {
+              return (<ViewTask />)
+            }
+          } />
           {/* Faculty Committees Routes */}
           <Route path="/Faculty/ViewCommittee" exact strict render={
             () => {

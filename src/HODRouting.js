@@ -10,6 +10,8 @@ import EditCourse from './Components/HOD/EditCourse'
 import UpcomingMeetings from './Components/HOD/UpcomingMeetings'
 import RecentMeetings from './Components/HOD/RecentMeetings'
 import CreateMeeting from './Components/HOD/CreateMeeting'
+import CommitteeBased from './Components/HOD/Meeting/CommitteeBased'
+import ParticipantBased from './Components/HOD/Meeting/ParticipantBased'
 import SectionDetails from './Components/HOD/SectionDetails'
 import SectionCourse from './Components/HOD/SectionCourse'
 import ViewStudents from './Components/HOD/ViewStudents'
@@ -134,6 +136,16 @@ export default class HODRouting extends Component {
           <Route path="/HOD/CreateMeeting" exact strict render={
             () => {
               return (<CreateMeeting />)
+            }
+          } />
+          <Route path="/HOD/Meeting/CommitteeBased" exact strict render={
+            () => {
+              return (<CommitteeBased />)
+            }
+          } />
+          <Route path="/HOD/Meeting/ParticipantBased" exact strict render={
+            () => {
+              return (<ParticipantBased />)
             }
           } />
           <Route path="/HOD/RecentMeetings" exact strict render={

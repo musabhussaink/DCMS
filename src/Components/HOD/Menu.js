@@ -22,12 +22,12 @@ export default class Menu extends Component {
                                         <li>
                                             <Link to="/HOD/CreateCommittee"> Create Commitee<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="/HOD/ExcelCommittee"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
-                                        <li>
+                                        </li> */}
+                                        {/* <li>
                                             <Link to="/HOD/CommitteeFeedbackQuestions"> Feedback Questions<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
@@ -64,12 +64,12 @@ export default class Menu extends Component {
                                         <li>
                                             <Link to="/HOD/Student"> View Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
-                                        {/* <li>
+                                        <li>
                                             <Link to="/HOD/CreateStudent"> Add Student<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="/HOD/ExcelStudent"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li> */}
+                                        </li>  */}
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>
@@ -91,12 +91,12 @@ export default class Menu extends Component {
                                         <li>
                                             <Link to="/HOD/Faculty"> View Faculty Members<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
-                                        {/* <li>
-                                            <Link to="/HOD/CreateFaculty"> Add Faculty Members<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
-                                        </li> */}
                                         <li>
-                                            <Link to="/HOD/ExcelFaculty"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                            <Link to="/HOD/CreateFaculty"> Add Faculty Members<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
                                         </li>
+                                        {/* <li>
+                                            <Link to="/HOD/ExcelFaculty"> Import Excel Sheet<span className="fa fa-share" style={{ float: 'left', margin: '3px' }}>&nbsp;</span></Link>
+                                        </li> */}
                                     </ul>
                                     {/* /.nav-second-level */}
                                 </li>

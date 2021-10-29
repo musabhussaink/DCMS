@@ -1,63 +1,176 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Select from 'react-select'
+import "react-table-6/react-table.css";
+import { Link, Redirect } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
-export default class AddHOC extends Component {
+export default class AddHOC extends Component 
+{
+    constructor(props){
+        super(props)
+        this.state = {
+        CommitteeOptions: [],
+        UserOptions: [],
+        RoleOptions: [],
+        committee: "",
+        role: "",
+        User: "",
+        disable: ""
+        }
+    }
+    async getCommitteeOptions(){
+        const res = await axios.get('http://localhost:3306/addhocHOD/committeelist')
+        const data = res.data
+    
+        const options = data.map(d => ({
+            "value" : d.idCommittee,
+            "label" : d.CommitteeName
+        }))
+        this.setState({CommitteeOptions: options})
+    }
+
+    async getUserOptions(){
+        const res = await axios.get('http://localhost:3306/addhocHOD/userlist')
+        const data = res.data
+    
+        const options = data.map(d => ({
+            "value" : d.idUser,
+            "label" : d.Name
+        }))
+    
+        this.setState({UserOptions: options})
+    }
+
+    componentDidMount(){
+        this.getCommitteeOptions();
+        this.getUserOptions();
+        this.state.disable = true;
+    }
+
+    handleCommitteeChange = (event) => {
+        this.setState({
+            committee: event.value,
+        })
+    }
+
+    handleUserChange = (event) => {
+        this.setState({
+            user: event.value
+        })
+    }
+    handleDisable(){
+        this.setState({
+            disable: false
+        })
+    }
+
+    state = {
+        redirect: false
+    }
+    
+    setRedirect = () => {
+        this.setState({
+        redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/HOD/AddHOC' />
+        }
+    }
+
+    CreateHOCUser = async () => {
+
+    try {
+        var committeeId = this.state.committee;
+        var userId = this.state.user;
+        console.log(committeeId)
+        console.log(userId)
+
+        var res = await axios({
+            method: 'post',
+            url: 'http://localhost:3306/addhocHOD/updateHead',
+            data: {
+               committee: committeeId,
+               user: userId
+            }
+        })
+        var result = res.data;
+        console.log(result.success);
+        if (result) {
+            window.location.reload();
+            Swal.fire('Head Added!','this record has been added', 'success');
+        }
+
+        else if (result && result.success === false) {
+            Swal.fire('Failed!',result.err, 'warning');
+        }
+    }
+    catch (e) {
+        console.log(e);
+    }
+}
+
     render() {
+        // console.log(this.state.selectOptions)
+        const mystyle = {
+            color: "white",
+            padding: "20px",
+            fontFamily: "Arial",
+            textAlign: "center",
+            font: "900 40px",
+            width:"100%"
+        };
         return (
-            <div>
-                <div id="page-wrapper" style={{}}>
-                    <div className="row">
+        <div>
+            <div id="page-wrapper" style={{}}>
+                <h1>Add head of Committee User</h1>
+                <hr></hr>
+                <div className="row">
                         <div className="col-lg-12">
-                            <h2>Add New HOC</h2>
-                            <form action="/HOD/AddHOC"><input name="__RequestVerificationToken" type="hidden" defaultValue="ZGaiNbLxv56lU8y27n2YZzmclN20ZHlbLndh2_ZRfWfy1jLv3yYscHF8OTMXqKyl6JJ38wb5TWqKFvO7uI-mm8mQ9QcpJZpoTz2D2lndnAeofB2z5530aAjRF3H6l2Qz0" />    <div className="form-horizontal">
-                                <hr />
-                                <input id="Password" name="Password" type="hidden" defaultValue />
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Name">Name</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true" />
-                                    </div>
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Select Committee
+                                </label>
+                                <div className="col-md-10">
+                                    <Select options={this.state.CommitteeOptions} onChange={(e)=>{
+                                        this.handleCommitteeChange(e);
+                                        this.handleDisable();}} required/>
                                 </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="No">Contact#</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-regex="Entered phone format is not valid." data-val-regex-pattern="^\(?([0-9]{4})\)?[-. ]?([0-9]{7})$" id="No" name="No" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="No" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Email">Email</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-email="Invalid Email Address!" data-val-length="The field Email must be a string with a maximum length of 40." data-val-length-max={40} data-val-required="The Email field is required." id="Email" name="Email" type="email" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                {/* <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Roles" title="Leave both unticked for instructor only">Roles</label>
-                                    <div className="col-md-10">
-                                        <input type="checkbox" defaultValue="Mentor" name="facRole" title="Leave both unticked for instructor only" />Mentor &nbsp;
-                                        <input type="checkbox" defaultValue="PEC" name="facRole" title="Leave both unticked for instructor only" />PEC
-                                    </div>
-                                </div> */}
-                                <div className="form-group">
-                                    <div className="col-md-offset-2 col-md-10">
-                                        <input type="submit" defaultValue="Create" className="btn btn-primary" />
-                                    </div>
-                                </div>
-                            </div>
-                            </form>
-                            <div>
-                                <Link to="/HOD/ViewHOC">Back to List</Link>
                             </div>
                         </div>
-                        {/* /.col-lg-12 */}
                     </div>
-                    {/* /.row */}
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Select Head User
+                                </label>
+                                <div className="col-md-10">
+                                    <Select options={this.state.UserOptions} onChange={this.handleUserChange.bind(this)} isDisabled={this.state.disable} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                            <div>
+                            <div className="container-fluid" style={mystyle}><Link to="/HOD/ViewHOC">
+                                    <input style={mystyle} type="submit" defaultValue="Create" onClick={() => this.CreateHOCUser()} className="btn btn-primary" /></Link>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
                 </div>
-                <hr />
-            </div>
+        </div>
 
         )
     }
+
 }

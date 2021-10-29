@@ -2,14 +2,24 @@ import React, { Component } from 'react'
 // import Menu from './Menu';
 
 export default class extends Component {
-
+    
     componentDidMount() {
         const script = document.createElement("script");
         script.src = 'js/Admin.js';
         script.async = 'true';
         document.body.appendChild(script);
+    }   
+    windowOnload = () => {
+        if (!window.location.hash) {
+            window.location = window.location + '#';
+            window.location.reload();
+        }
     }
     render() {
+        let load = true;
+        if (load) {
+            this.windowOnload();
+        }
         return (
             <div>
                 <div id="page-wrapper" style={{}}>

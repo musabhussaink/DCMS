@@ -1,70 +1,222 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Select from 'react-select'
+import "react-table-6/react-table.css";
+import { Link, Redirect } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
-export default class AddStudents extends Component {
+export default class AddStudents extends Component 
+{
+    constructor(props){
+        super(props)
+        this.state = {
+        Email: "",
+        Password: "",
+        Name: "",
+        PhoneNo: "",
+        Designation: "",
+        RegistrationNo: ""
+        }
+    }
+
+    handleEmailChange = (event) => {
+        this.setState({
+            Email: event.target.value,
+        })
+    }
+
+    handlePasswordchange = (event) => {
+        this.setState({
+            Password: event.target.value
+        })
+    }
+
+    handleNamechange = (event) => {
+        this.setState({
+            Name: event.target.value
+        })
+        // console.log(event.target.value)
+    }
+
+    handlePhoneNochange = (event) => {
+        this.setState({
+            PhoneNo: event.target.value
+        })
+    }
+
+    handleDesignationchange = (event) => {
+        this.setState({
+            Designation: event.target.value
+        })
+    }
+    handleRegistrationNochange = (event) => {
+        this.setState({
+            RegistrationNo: event.target.value
+        })
+    }
+
+    state = {
+        redirect: false
+    }
+    
+    setRedirect = () => {
+        this.setState({
+        redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/Admin/Student' />
+        }
+    }
+
+    CreateStudentUser = async () => {
+
+    try {
+        var Email = this.state.Email;
+        var Password = this.state.Password;
+        var PhoneNo = this.state.PhoneNo;
+        var Name = this.state.Name;
+        var Designation = this.state.Designation;
+        var Registration = this.state.RegistrationNo
+
+        var res = await axios({
+            method: 'post',
+            url: 'http://localhost:3306/addStudentADMIN',
+            data: {
+                Email: Email,
+                Password: Password,
+                PhoneNo: PhoneNo,
+                Name: Name,
+                Designation: Designation,
+                Registration: Registration
+            }
+        })
+        var result = res.data;
+        console.log(result.success);
+        if (result) {
+            window.location.reload();
+            Swal.fire('Student Added!','this record has been added', 'success');
+        }
+
+        else if (result && result.success === false) {
+            Swal.fire('Failed!',result.err, 'warning');
+        }
+    }
+    catch (e) {
+        console.log(e);
+    }
+}
+
     render() {
+        // console.log(this.state.selectOptions)
+        const mystyle = {
+            color: "white",
+            padding: "20px",
+            fontFamily: "Arial",
+            textAlign: "center",
+            font: "900 40px",
+            width:"100%"
+        };
         return (
-            <div>
-                <div id="page-wrapper" style={{}}>
+        <div>
+            <div id="page-wrapper" style={{}}>
+                <h1>Add Student User</h1>
+                <hr></hr>
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>Add Student</h2>
-                            <form action="/Admin/CreateStudent" method="post"><input name="__RequestVerificationToken" type="hidden" defaultValue="Pxn325IjnUF3956qEvOuuEStf-j6oo9Gulpsb7VXhHiPIjbMiwiX6ox-DfYvSpqFj8HsmNjvN8vjQR5ap8yPEqaAmjlHjbytUbnM6XFPuKtndKy9BDW0-zAvCAWdKU770" />    <div className="form-horizontal">
-                                <hr />
-                                <input id="Password" name="Password" type="hidden" defaultValue />
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Name">Name</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true" />
-                                    </div>
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Email
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handleEmailChange} type="input" className="form-control text-box single-line" required></input>
                                 </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="RegNo">Reg#</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-required="The Reg# field is required." id="RegNo" name="RegNo" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="RegNo" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="No">Contact#</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-regex="Entered phone format is not valid." data-val-regex-pattern="^\(?([0-9]{4})\)?[-. ]?([0-9]{7})$" id="No" name="No" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="No" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="Email">Email</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-length="The field Email must be a string with a maximum length of 40." data-val-length-max={40} id="Email" name="Email" type="email" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label className="control-label col-md-2" htmlFor="CGPA">CGPA</label>
-                                    <div className="col-md-10">
-                                        <input className="form-control text-box single-line" data-val="true" data-val-number="The field CGPA must be a number." data-val-range="The field CGPA must be between 1 and 4." data-val-range-max={4} data-val-range-min={1} id="CGPA" name="CGPA" type="text" defaultValue />
-                                        <span className="field-validation-valid" data-valmsg-for="CGPA" data-valmsg-replace="true" />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <div className="col-md-offset-2 col-md-10">
-                                        <input type="submit" defaultValue="Add" className="btn btn-primary" />
-                                    </div>
-                                </div>
-                            </div>
-                            </form>
-                            <div>
-                                <Link to="/Admin/Student">Back to List</Link>
                             </div>
                         </div>
-                        {/* /.col-lg-12 */}
                     </div>
-                    {/* /.row */}
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Password
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handlePasswordchange} type="text" className="form-control text-box single-line" required></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Name
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handleNamechange} type="text" className="form-control text-box single-line" ></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    PhoneNo
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handlePhoneNochange} type="text" className="form-control text-box single-line"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Registration No.
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handleRegistrationNochange} type="text" className="form-control text-box single-line"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label className="control-label col-md-2">
+                                    Designation
+                                </label>
+                                <div className="col-md-10">
+                                    <input onChange={this.handleDesignationchange} type="text" className="form-control text-box single-line"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                            <div>
+                            <div className="container-fluid" style={mystyle}><Link to="/Admin/Student">
+                                    <input style={mystyle} type="submit" defaultValue="Create" onClick={() => this.CreateStudentUser()} className="btn btn-primary" /></Link>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
                 </div>
-                <hr />
-            </div>
+        </div>
 
         )
     }
+
 }

@@ -1,43 +1,70 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css"
 
 export default class HocReview extends Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            posts: []
+        }
+    }
+
+    componentDidMount() {
+        const url = "http://localhost:3306/HOCReviews";
+        fetch(url, {
+            method: "GET"
+        }).then(response => response.json()).then(post => {
+            this.setState({posts: post.result})
+        })
+    }
     render(){
+        const columns = [
+            { 
+                Header: "Name",
+                accessor:"Name",
+                headerStyle: { fontWeight: 'bold' },
+                style:{
+                    textAlign:"center"
+                }
+            },
+            {
+                Header: "Date",
+                accessor:"Date",
+                headerStyle: { fontWeight: 'bold' },
+                filterable:'',
+                style:{
+                    textAlign:"center"
+                }
+            },
+            {
+                Header:"Reviews",
+                accessor:"Reviews",
+                headerStyle: { fontWeight: 'bold' },
+                filterable:'',
+                style:{
+                    textAlign:"center"
+                }
+            }
+        ]
         return(
-         
+            
          <div>
              <div id="page-wrapper">
              <div><h1>Head of Committee Reviews</h1></div> <hr></hr>
-             <table class="table table-bordered">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Reviews</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Yasir Faheemk</td>
-                    <td>2-Aug-2020</td>
-                    <td>Keep it up !!</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Yasir Faheem</td>
-                    <td>2-Aug-2020</td>
-                    <td>Excellent Work !!</td>
-                    </tr>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td>Yasir Faheem</td>
-                    <td>2-Aug-2020</td>
-                    <td>Keep it up !!</td>
-                    </tr>
-                </tbody>
-                </table>
+             <ReactTable className = "-striped -highlight"
+                columns = {columns}
+                data = {
+                    this.state.posts
+                }
+                filterable
+                defaultPageSize = {10}
+                noDataText = {"Please Wait.."}
+                pageSizeOptions = {[2,4,6]}
+                >
+            </ReactTable>
                  </div>
          </div>   
         )

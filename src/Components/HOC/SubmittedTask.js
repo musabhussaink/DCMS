@@ -1,62 +1,117 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css";
+
 
 export default class SubmittedTask extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            data: []
+        }
+    }
+
+    async componentDidMount() {
+        await axios.get('http://localhost:3306/SubmittedTasksHoc').then(
+            res => {
+                this.setState({
+                    data: res.data.sessionsData
+                })
+            },
+            err => {
+                console.log(err);
+            }
+        )
+    }
     render() {
+        
+            const columns = [
+            //     {
+            //     Header: "ID",
+            //     accessor:"idMilestone"
+                
+            // },
+               { 
+                Header: "Sr No",
+                accessor:"",
+                width:"50",
+                filterable:'',
+                style:{
+                    textAlign:"center"
+                }
+            },
+            {
+                Header: "Task Description",
+                accessor:"",
+                width:"250",
+                filterable:'',
+                style:{
+                    textAlign:"center"
+                }
+
+            }, 
+            {
+                Header: "Submit On",
+                accessor:"",
+                width:"150",
+                filterable:'',
+                
+
+                style:{
+                    textAlign:"center"
+                }
+
+            },
+
+            {
+                Header: "Assigning Date",
+                accessor:"",
+                width:"150",
+                filterable:'',
+                
+
+                style:{
+                    textAlign:"center"
+                }
+
+            },
+            {
+                Header: "Task Deadline",
+                accessor:"",
+                headerStyle: { fontWeight: 'bold' },
+                width:"150",
+                filterable:'',
+                
+
+                style:{
+                    textAlign:"center"
+                }
+
+            }
+                
+        ]
         return (
             <div>
                 <div id="page-wrapper" style={{}}>
                     <div className="row">
                         <div className="col-lg-12">
-                        <hr></hr> <h2>List of Submitted Tasks</h2><hr></hr>
-                            <table className="table table-striped table-condensed table-bordered">
-                                <tbody><tr>
-                                    <th>
-                                        Sr No
-              </th>
-                                    <th>
-                                        Task Description
-              </th>
-                                    <th>
-                                        SubmitOn
-              </th>
-              
-                                    <th>
-                                        Assigning Date
-              </th>
-                                    <th>
-                                        Task Deadline
-              </th>
-             
-                                    
-                                </tr>
-                                    <tr>
-                                        <td>
-                                            1
-              </td>
-                                        <td>
-                                            Description here
-              </td>
-                                        <td>
-                                            18-08-2020
-              </td>
-              <td>
-                                            03-08-2020
-              </td>
-                                        <td>
-                                            20-08-2020
-              </td>
-                                        
-                                       
-                                    </tr>
+                            <br></br>
+                            <h2>List of Submitted Tasks</h2>
+                            
+                            <hr></hr>
+                            <ReactTable className="-striped -highlight"
+                              columns = {columns} 
+                              data = {this.state.data}
+                              filterable
+                              noDataText={"Please Wait..."}
+                              defaultPageSize={5}>
+                            </ReactTable>      
 
-                                </tbody></table>
-                            <div id="spinner" className="spinner" style={{ display: 'none' }}>
-                                <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', margin: '0 auto', backgroundColor: '#000', opacity: '.4', zIndex: 999999 }}>
-                                    <img id="img-spinner" src={`${process.env.PUBLIC_URL}/Assets/spinner.gif`} alt="Loading" style={{ position: 'absolute', height: 'auto!important', width: 'auto!important', left: '47%', top: '47%' }} /><br />
-                                    <p style={{ position: 'absolute', height: 'auto !important', width: 'auto !important', left: '51%', top: '51%', fontSize: 20, color: 'white' }}>Please Wait</p>
-                                </div>
-                            </div>
+                        
+
+
                         </div>
                         {/* /.col-lg-12 */}
                     </div>
